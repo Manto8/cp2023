@@ -1,326 +1,334 @@
-<h1>About</h1>
-<p><a href="https://github.com/mdecycu/cmsite"> https://github.com/mdecycu/cmsite</a></p>
-<h1>w5</h1>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">// 包含標準輸出入程式庫的標頭文件
-// https://blog.csdn.net/weixin_38468077/article/details/101069365
-// http://www.gnuplot.info/demo/
-// https://github.com/sysprog21/rv32emu
-// https://github.com/sysprog21/semu 
-// https://docs.google.com/presentation/d/14N0cWG2SnBSqhc2cLF0_2VerB9FF8JN3
-// https://cs61c.org/fa23/
-// https://greenteapress.com/wp/think-python-2e/
-// https://github.com/ecalvadi/c99-examples
-// https://github.com/gouravthakur39/beginners-C-program-examples
-// https://github.com/ergenekonyigit/Numerical-Analysis-Examples
-// https://www.che.ncku.edu.tw/facultyweb/changct/html/teaching/CPPandMATLAB/Past/pdf%20Files/Chap02-Ling.pdf
-// https://gteceducation.com.sg/Brochures/PROGRAMMING/C%20PROGRAMMING%20FULL.pdf
-// https://jsommers.github.io/cbook/cbook.pdf
-// https://jsommers.github.io/cbook/index.html
-// http://student.itee.uq.edu.au/courses/csse2310/CProgrammingNotes.pdf
-// http://cslibrary.stanford.edu/101/EssentialC.pdf
-// https://publications.gbdirect.co.uk/c_book/
-// https://www.fossil-scm.org/fossil-book/doc/2ndEdition/fossilbook.pdf
-// ***** execute on replit 
-// cd downloads
-// cc gnuplot_ex1.c -o gnuplot_ex1
-// ./gnuplot_ex1
-#include &lt;stdio.h&gt;
-
-// 主函式
-int main() {
-    // Start a Gnuplot process using popen
-    FILE *gnuplotPipe = popen("gnuplot -persistent", "w");
-    if (!gnuplotPipe) {
-        fprintf(stderr, "Failed to start Gnuplot.\n");
-        return 1;
-    }
-
-    // Use Gnuplot plotting commands, specify font and output as PNG
-    fprintf(gnuplotPipe, "set terminal png font 'default,10' size 800,400\n");
-    fprintf(gnuplotPipe, "set output './../images/gnuplot_ex1.png'\n");
-    fprintf(gnuplotPipe, "plot sin(x)");
-    // Close popen
-    pclose(gnuplotPipe);
-
-    return 0;
-}</pre>
+<h1><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">關於</span></span></h1>
+<p><a href="https://github.com/mdecycu/cmsite"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">https://github.com/mdecycu/cmsite</span></span></a></p>
+<h1><strong><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">W2</span></span></strong></h1>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">安裝說明Apps、如何安裝網路道路、偵測案件是否安全連網。</span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">說明如何利用近端可攜系統執行C程式,如何利用ChatGPT進行對話。</span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">說明如何利用Replit協助編輯網頁內容</span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">說明如何connect Replit to Github,如何建立個人網站並利用Replit<span>編輯網頁內容。</span></span></span></p>
+<p></p>
+<p></p>
+<h1><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">W5</span></span></h1>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">// 包含標準輸出入程式庫的標頭文件</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// https://blog.csdn.net/weixin_38468077/article/details/101069365</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// http://www.gnuplot.info/demo/</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// https://github.com/sysprog21/rv32emu</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// https://github.com/sysprog21/semu</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// https://docs.google.com/presentation/d/14N0cWG2SnBSqhc2cLF0_2VerB9FF8JN3</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// https://cs61c.org/fa23/</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// https://greenteapress.com/wp/think-python-2e/</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// https://github.com/ecalvadi/c99-examples</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// https://github.com/gouravthakur39/beginners-C-program-examples</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// https://github.com/ergenekonyigit/Numerical-Analysis-Examples</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// https://www.che.ncku.edu.tw/facultyweb/changct/html/teaching/CPPandMATLAB/Past/pdf%20Files/Chap02-Ling.pdf</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// https://gteceducation.com.sg/Brochures/PROGRAMMING/C%20PROGRAMMING%20FULL.pdf</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// https://jsomers.github.io/cbook/cbook.pdf</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// https://jsomers.github.io/cbook/index.html</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// http://student.itee.uq.edu.au/courses/csse2310/CProgrammingNotes.pdf</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// http://cslibrary.stanford.edu/101/EssentialC.pdf</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// https://publications.gbdirect.co.uk/c_book/</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// https://www.fossil-scm.org/fossil-book/doc/2ndEdition/fossilbook.pdf</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// ***** 在 replit 上執行</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// CD 下載</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// cc gnuplot_ex1.c -o gnuplot_ex1</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// ./gnuplot_ex1</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+#include &lt;stdio.h&gt;</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// 主函式</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+int main() {</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    // 使用 popen 啟動 Gnuplot 進程</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    FILE *gnuplotPipe = popen("gnuplot -persistent", "w");</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    如果（！gnuplotPipe）{</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+        fprintf(stderr, "無法啟動 Gnuplot。\n");</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+        返回1；</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    }</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    // 使用Gnuplot繪圖指令，指定字型並輸出為PNG</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    fprintf(gnuplotPipe, "設定終端 png 字體 '預設,10' 大小 800,400\n");</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    fprintf(gnuplotPipe, "設定輸出 './../images/gnuplot_ex1.png'\n");</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    fprintf(gnuplotPipe, "繪製 sin(x)");</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    // 關閉popen</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    pclose(gnuplotPipe);</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    返回0；</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+}</span></span></pre>
 <p><img alt="" height="200" src="/images/gnuplot_ex1.png" width="400"/></p>
-<h1>w6</h1>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">// https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_China
-// 內政部國旗參考資料: https://www.moi.gov.tw/cp.aspx?n=10621
-// cc roc_flag_in_gd.c -lgd -lm to link with gd and math library
-// https://www.rapidtables.com/web/color/RGB_Color.html
-// 幾何形狀著色與繪圖練習
-// 以下 gd 繪圖程式嘗試畫出 ROC 國旗, 請根據下列程式內容完成後續的國旗繪圖
-#include &lt;stdio.h&gt;
-#include &lt;gd.h&gt;
-#include &lt;math.h&gt;
-
-void draw_roc_flag(gdImagePtr img);
-void draw_white_sun(gdImagePtr img, int x, int y, int size, int color);
-
-int main() {
-    // width 3: height 2
-    int width = 1200;
-    // 國旗長寬比為 3:2
-    int height = (int)(width*2.0 / 3.0);
-
-    gdImagePtr img = gdImageCreateTrueColor(width, height);
-    gdImageAlphaBlending(img, 0);
-
-    draw_roc_flag(img);
-
-    FILE *outputFile = fopen("./../images/roc_flag_in_gd.png", "wb");
-    if (outputFile == NULL) {
-        fprintf(stderr, "Error opening the output file.\n");
-        return 1;
-    }
-    gdImagePngEx(img, outputFile, 9);
-    fclose(outputFile);
-    gdImageDestroy(img);
-    return 0;
-}
-
-void draw_roc_flag(gdImagePtr img) {
-    int width = gdImageSX(img);
-    int height = gdImageSY(img);
-    int red, white, blue;
-    // 白日位於青天面積正中央, 因此中心點座標為長寬各 1/4 處
-    int center_x = (int)(width/4);
-    int center_y = (int)(height/4);
-    // gdImageFilledEllipse 需以長寬方向的 diameter 作圖
-    // 由於中央白日圓形的半徑為青天寬度的 1/8
-    // 因此中央白日圓形的直徑為青天寬度的 1/4, 也就是國旗寬度的 1/8
-    // 而且白日十二道光芒的外圍圓形其半徑也是國旗寬度的1/8
-    int sun_radius = (int)(width/8);
-    // 中央白日圓形的直徑等於十二道光芒外圍圓形的半徑
-    int white_circle_dia = sun_radius;
-    // 中央藍色圓形半徑為中央白日的 1又 2/15
-    int blue_circle_dia = white_circle_dia +  white_circle_dia*2/15;
-    // 根據 https://www.moi.gov.tw/cp.aspx?n=10621 訂定國旗三種顏色值
-    red = gdImageColorAllocate(img, 255, 0, 0); // 紅色
-    white = gdImageColorAllocate(img, 255, 255, 255); // 白色
-    blue = gdImageColorAllocate(img, 0, 0, 149); // 藍色
-    // 根據畫布大小塗上紅色長方形區域
-    gdImageFilledRectangle(img, 0, 0, width, height, red);
-    // 青天面積為整面國旗的 1/4, 也是採用長方形塗色
-    gdImageFilledRectangle(img, 0, 0, (int)(width/2.0), (int)(height/2.0), blue);
-    // 先設法以填色畫出六個白色堆疊菱形
-    draw_white_sun(img, center_x, center_y, sun_radius, white);
-    // 利用一個藍色大圓與白色小圓畫出藍色環狀
-    gdImageFilledEllipse(img, center_x, center_y, blue_circle_dia, blue_circle_dia, blue);
-    gdImageFilledEllipse(img, center_x, center_y, white_circle_dia, white_circle_dia, white);
-
-}
-
-void draw_white_sun(gdImagePtr img, int center_x, int center_y, int sun_radius, int color) {
-    // M_PI 大小定義於 math.h 標頭檔中, 因為三角函數中採用徑度為角度單位
-    // 因此定義將角度轉為徑度的轉換變數為 deg, 角度值乘上 deg 就可轉為徑度
-    float deg = M_PI/180;
-    // 根據十二道光芒的每一尖角的角度為 15 度, 求出其對應直角三角形的另一角度為 75 度
-    // 求出十二道光芒中任一菱形的 small radius, 也就是菱形的另一個對應小圓的半徑大小
-    float sr = sun_radius/tan(75*deg);
-    int ax, ay, bx, by, dx, dy, ex, ey;
-    gdPoint points[4];
-    /* 在塗上十二道光芒中的單一菱形區域之前, 先以座標點畫線測試是否正確
-    ax = center_x;
-    ay = center_y - sun_radius;
-    bx = center_x - sun_radius*tan(15*deg);
-    by = center_y;
-    ex = center_x;
-    ey = center_y + sun_radius;
-    dx = center_x + sun_radius*tan(15*deg);
-    dy = center_y;
-    // AB
-    gdImageLine(img, ax, ay, bx, by, color);
-    // BE
-    gdImageLine(img, bx, by, ex, ey, color);
-    // ED
-    gdImageLine(img, ex, ey, dx, dy, color);
-    // DA
-    gdImageLine(img, dx, dy, ax, ay, color);
-    */
-    ax = center_x;
-    ay = center_y - sun_radius;
-    bx = center_x - sun_radius*tan(15*deg);
-    by = center_y;
-    ex = center_x;
-    ey = center_y + sun_radius;
-    dx = center_x + sun_radius*tan(15*deg);
-    dy = center_y;
-    // 確定單一菱形區域的塗色正確後, 利用迴圈每次轉動 30 度, 總共轉六次即可塗上十二道光芒區域
-    for (int i=1;i&lt;=6;i++){
-    // A
-    points[0].x = ax+sun_radius*sin(30*deg*i);
-    points[0].y = ay+sun_radius-sun_radius*cos(30*deg*i);
-    // B
-    points[1].x = bx+sr-sr*cos(30*deg*i);
-    points[1].y = by-sr*sin(30*deg*i);
-    // E
-    points[2].x = ex-sun_radius*sin(30*deg*i);
-    points[2].y = ey-(sun_radius-sun_radius*cos(30*deg*i));
-    // D
-    points[3].x = dx-(sr-sr*cos(30*deg*i));
-    points[3].y = dy+sr*sin(30*deg*i);
-    // 對菱形區域範圍塗色
-    gdImageFilledPolygon(img, points, 4, color);
-    // 在菱形區域外圍畫線, 明確界定菱形範圍
-    gdImagePolygon(img, points, 4, color);
-    }
+<h1><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">w6</span></span></h1>
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">// https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_China</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// 內政部國旗參考資料：https://www.moi.gov.tw/cp.aspx?n=10621</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// cc roc_flag_in_gd.c -lgd -lm 與 gd 和數學庫鏈接</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// https://www.rapidtables.com/web/color/RGB_Color.html</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// 幾何形狀著色與繪圖練習</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+// 以下 gd 繪圖方案嘗試繪製中華民國國旗，請依照以下方案內容完成後續的國旗繪圖</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+#include &lt;stdio.h&gt;</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+#include &lt;gd.h&gt;</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+#include &lt;數學.h&gt;</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+無效draw_roc_flag（gdImagePtr img）；</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+void draw_white_sun(gdImagePtr img, int x, int y, int size, int color);</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+int main() {</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    // 寬度 3: 高度 2</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    整數寬度=1200；</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    // 國旗長寬比為3:2</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    int 高度 = (int)(寬度*2.0 / 3.0);</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    gdImagePtr img = gdImageCreateTrueColor(寬度, 高度);</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    gdImageAlphaBlending(img, 0);</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    繪製_roc_flag（img）；</span></span><span></span>
+<span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    FILE *outputFile = fopen("./../images/roc_flag_in_gd.png", "wb");</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    如果（輸出檔== NULL）{</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+        fprintf(stderr, "開啟輸出檔時發生錯誤。\n");</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+        返回1；</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    }</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    gdImagePngEx(img, 輸出檔, 9);</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    fclose(輸出檔);</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    gdImageDestroy(img);</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+    返回0；</span></span><span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">
+}</span></span><span></span>
+<span></span>
+void draw_roc_flag(gdImagePtr img) {<span></span>
+    int width = gdImageSX(img);<span></span>
+    int height = gdImageSY(img);<span></span>
+    int red, white, blue;<span></span>
+    // 白日位於青天面積正中央, 因此中心點座標為長寬各 1/4 處<span></span>
+    int center_x = (int)(width/4);<span></span>
+    int center_y = (int)(height/4);<span></span>
+    // gdImageFilledEllipse 需以長寬方向的 diameter 作圖<span></span>
+    // 由於中央白日圓形的半徑為青天寬度的 1/8<span></span>
+    // 因此中央白日圓形的直徑為青天寬度的 1/4, 也就是國旗寬度的 1/8<span></span>
+    // 而且白日十二道光芒的外圍圓形其半徑也是國旗寬度的1/8<span></span>
+    int sun_radius = (int)(width/8);<span></span>
+    // 中央白日圓形的直徑等於十二道光芒外圍圓形的半徑<span></span>
+    int white_circle_dia = sun_radius;<span></span>
+    // 中央藍色圓形半徑為中央白日的 1又 2/15<span></span>
+    int blue_circle_dia = white_circle_dia +  white_circle_dia*2/15;<span></span>
+    // 根據 https://www.moi.gov.tw/cp.aspx?n=10621 訂定國旗三種顏色值<span></span>
+    red = gdImageColorAllocate(img, 255, 0, 0); // 紅色<span></span>
+    white = gdImageColorAllocate(img, 255, 255, 255); // 白色<span></span>
+    blue = gdImageColorAllocate(img, 0, 0, 149); // 藍色<span></span>
+    // 根據畫布大小塗上紅色長方形區域<span></span>
+    gdImageFilledRectangle(img, 0, 0, width, height, red);<span></span>
+    // 青天面積為整面國旗的 1/4, 也是採用長方形塗色<span></span>
+    gdImageFilledRectangle(img, 0, 0, (int)(width/2.0), (int)(height/2.0), blue);<span></span>
+    // 先設法以填色畫出六個白色堆疊菱形<span></span>
+    draw_white_sun(img, center_x, center_y, sun_radius, white);<span></span>
+    // 利用一個藍色大圓與白色小圓畫出藍色環狀<span></span>
+    gdImageFilledEllipse(img, center_x, center_y, blue_circle_dia, blue_circle_dia, blue);<span></span>
+    gdImageFilledEllipse(img, center_x, center_y, white_circle_dia, white_circle_dia, white);<span></span>
+<span></span>
+}<span></span>
+<span></span>
+void draw_white_sun(gdImagePtr img, int center_x, int center_y, int sun_radius, int color) {<span></span>
+    // M_PI 大小定義於 math.h 標頭檔中, 因為三角函數中採用徑度為角度單位<span></span>
+    // 因此定義將角度轉為徑度的轉換變數為 deg, 角度值乘上 deg 就可轉為徑度<span></span>
+    float deg = M_PI/180;<span></span>
+    // 根據十二道光芒的每一尖角的角度為 15 度, 求出其對應直角三角形的另一角度為 75 度<span></span>
+    // 求出十二道光芒中任一菱形的 small radius, 也就是菱形的另一個對應小圓的半徑大小<span></span>
+    float sr = sun_radius/tan(75*deg);<span></span>
+    int ax, ay, bx, by, dx, dy, ex, ey;<span></span>
+    gdPoint points[4];<span></span>
+    /* 在塗上十二道光芒中的單一菱形區域之前, 先以座標點畫線測試是否正確<span></span>
+    ax = center_x;<span></span>
+    ay = center_y - sun_radius;<span></span>
+    bx = center_x - sun_radius*tan(15*deg);<span></span>
+    by = center_y;<span></span>
+    ex = center_x;<span></span>
+    ey = center_y + sun_radius;<span></span>
+    dx = center_x + sun_radius*tan(15*deg);<span></span>
+    dy = center_y;<span></span>
+    // AB<span></span>
+    gdImageLine(img, ax, ay, bx, by, color);<span></span>
+    // BE<span></span>
+    gdImageLine(img, bx, by, ex, ey, color);<span></span>
+    // ED<span></span>
+    gdImageLine(img, ex, ey, dx, dy, color);<span></span>
+    // DA<span></span>
+    gdImageLine(img, dx, dy, ax, ay, color);<span></span>
+    */<span></span>
+    ax = center_x;<span></span>
+    ay = center_y - sun_radius;<span></span>
+    bx = center_x - sun_radius*tan(15*deg);<span></span>
+    by = center_y;<span></span>
+    ex = center_x;<span></span>
+    ey = center_y + sun_radius;<span></span>
+    dx = center_x + sun_radius*tan(15*deg);<span></span>
+    dy = center_y;<span></span>
+    // 確定單一菱形區域的塗色正確後, 利用迴圈每次轉動 30 度, 總共轉六次即可塗上十二道光芒區域<span></span>
+    for (int i=1;i&lt;=6;i++){<span></span>
+    // A<span></span>
+    points[0].x = ax+sun_radius*sin(30*deg*i);<span></span>
+    points[0].y = ay+sun_radius-sun_radius*cos(30*deg*i);<span></span>
+    // B<span></span>
+    points[1].x = bx+sr-sr*cos(30*deg*i);<span></span>
+    points[1].y = by-sr*sin(30*deg*i);<span></span>
+    // E<span></span>
+    points[2].x = ex-sun_radius*sin(30*deg*i);<span></span>
+    points[2].y = ey-(sun_radius-sun_radius*cos(30*deg*i));<span></span>
+    // D<span></span>
+    points[3].x = dx-(sr-sr*cos(30*deg*i));<span></span>
+    points[3].y = dy+sr*sin(30*deg*i);<span></span>
+    // 對菱形區域範圍塗色<span></span>
+    gdImageFilledPolygon(img, points, 4, color);<span></span>
+    // 在菱形區域外圍畫線, 明確界定菱形範圍<span></span>
+    gdImagePolygon(img, points, 4, color);<span></span>
+    }<span></span>
 }</pre>
 <p></p>
 <p></p>
 <p><img alt="" height="267" src="/images/roc_flag_in_gd.png" width="400"/></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-#include &lt;gd.h&gt;
-#include &lt;math.h&gt;
-
-void draw_usa_flag(gdImagePtr img);
-void draw_star(gdImagePtr img, int x, int y, int size, int color, double rotation_angle);
-
-int main() {
-    int width = 800;
-    int height = (int)(width / 1.9);
-
-    gdImagePtr img = gdImageCreateTrueColor(width, height);
-    gdImageAlphaBlending(img, 0);
-
-    draw_usa_flag(img);
-
-    FILE *outputFile = fopen("./../images/usa_flag.png", "wb");
-    if (outputFile == NULL) {
-        fprintf(stderr, "打开输出文件时出错。\n");
-        return 1;
-    }
-
-    gdImagePngEx(img, outputFile, 9);
-    fclose(outputFile);
-    gdImageDestroy(img);
-
-    return 0;
-}
-
-void draw_usa_flag(gdImagePtr img) {
-    int width = gdImageSX(img);
-    int height = gdImageSY(img);
-    int red, white, blue;
-    // 国旗颜色
-    red = gdImageColorAllocate(img, 178, 34, 52); // 红色条纹
-    white = gdImageColorAllocate(img, 255, 255, 255); // 白色条纹
-    blue = gdImageColorAllocate(img, 60, 59, 110); // 蓝色矩形
-
-    int stripe_height = height / 13;
-    int stripe_width = width;
-    int star_size = (int)(0.0308 * height); // 星星大小
-
-    for (int y = 0; y &lt; height; y += stripe_height) {
-        if (y / stripe_height % 2 == 0) {
-            gdImageFilledRectangle(img, 0, y, stripe_width, y + stripe_height, red);
-        } else {
-            gdImageFilledRectangle(img, 0, y, stripe_width, y + stripe_height, white);
-        }
-    }
-
-    gdImageFilledRectangle(img, 0, 0, width * 2 / 5, stripe_height * 7, blue);
-
-    int star_spacing_x = (int)(0.129 * height); // 横向星星之间的间距
-    int star_spacing_y = (int)(0.054 * height); // 纵向星星之间的间距
-    int star_start_x = (int)(0.125 * height); // 星星的起始X位置
-    int star_start_y = (int)(0.0485 * height); // 星星的起始Y位置
-
-    for (int row = 0; row &lt; 9; row++) {
-        int starsPerRow = (row % 2 == 0) ? 6 : 5;
-
-        // 计算2、4、6和8排星星的偏移量
-        int offset_x = (row % 2 == 0) ? star_spacing_x / -2 : 0;
-
-        for (int star = 0; star &lt; starsPerRow; star++) {
-            int x = star_start_x + star * star_spacing_x + offset_x;
-
-            // 旋转角度（以弧度为单位）
-            double rotation_angle = M_PI / 5; // 忘記多少度的旋转
-
-            int y = star_start_y + row * star_spacing_y;
-            draw_star(img, x, y, star_size, white, rotation_angle);
-        }
-    }
-}
-
-void draw_star(gdImagePtr img, int x, int y, int size, int color, double rotation_angle) {
-    gdPoint points[10];
-
-    for (int i = 0; i &lt; 10; i++) {
-        double angle = M_PI / 2 + i * 2 * M_PI / 10 + rotation_angle;
-        int radius = (i % 2 == 0) ? size : size / 2;
-        points[i].x = x + radius * cos(angle);
-        points[i].y = y + radius * sin(angle);
-    }
-
-    // 用指定的颜色填充星星
-    gdImageFilledPolygon(img, points, 10, color);
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;<span></span>
+#include &lt;gd.h&gt;<span></span>
+#include &lt;math.h&gt;<span></span>
+<span></span>
+void draw_usa_flag(gdImagePtr img);<span></span>
+void draw_star(gdImagePtr img, int x, int y, int size, int color, double rotation_angle);<span></span>
+<span></span>
+int main() {<span></span>
+    int width = 800;<span></span>
+    int height = (int)(width / 1.9);<span></span>
+<span></span>
+    gdImagePtr img = gdImageCreateTrueColor(width, height);<span></span>
+    gdImageAlphaBlending(img, 0);<span></span>
+<span></span>
+    draw_usa_flag(img);<span></span>
+<span></span>
+    FILE *outputFile = fopen("./../images/usa_flag.png", "wb");<span></span>
+    if (outputFile == NULL) {<span></span>
+        fprintf(stderr, "打开输出文件时出错。\n");<span></span>
+        return 1;<span></span>
+    }<span></span>
+<span></span>
+    gdImagePngEx(img, outputFile, 9);<span></span>
+    fclose(outputFile);<span></span>
+    gdImageDestroy(img);<span></span>
+<span></span>
+    return 0;<span></span>
+}<span></span>
+<span></span>
+void draw_usa_flag(gdImagePtr img) {<span></span>
+    int width = gdImageSX(img);<span></span>
+    int height = gdImageSY(img);<span></span>
+    int red, white, blue;<span></span>
+    // 国旗颜色<span></span>
+    red = gdImageColorAllocate(img, 178, 34, 52); // 红色条纹<span></span>
+    white = gdImageColorAllocate(img, 255, 255, 255); // 白色条纹<span></span>
+    blue = gdImageColorAllocate(img, 60, 59, 110); // 蓝色矩形<span></span>
+<span></span>
+    int stripe_height = height / 13;<span></span>
+    int stripe_width = width;<span></span>
+    int star_size = (int)(0.0308 * height); // 星星大小<span></span>
+<span></span>
+    for (int y = 0; y &lt; height; y += stripe_height) {<span></span>
+        if (y / stripe_height % 2 == 0) {<span></span>
+            gdImageFilledRectangle(img, 0, y, stripe_width, y + stripe_height, red);<span></span>
+        } else {<span></span>
+            gdImageFilledRectangle(img, 0, y, stripe_width, y + stripe_height, white);<span></span>
+        }<span></span>
+    }<span></span>
+<span></span>
+    gdImageFilledRectangle(img, 0, 0, width * 2 / 5, stripe_height * 7, blue);<span></span>
+<span></span>
+    int star_spacing_x = (int)(0.129 * height); // 横向星星之间的间距<span></span>
+    int star_spacing_y = (int)(0.054 * height); // 纵向星星之间的间距<span></span>
+    int star_start_x = (int)(0.125 * height); // 星星的起始X位置<span></span>
+    int star_start_y = (int)(0.0485 * height); // 星星的起始Y位置<span></span>
+<span></span>
+    for (int row = 0; row &lt; 9; row++) {<span></span>
+        int starsPerRow = (row % 2 == 0) ? 6 : 5;<span></span>
+<span></span>
+        // 计算2、4、6和8排星星的偏移量<span></span>
+        int offset_x = (row % 2 == 0) ? star_spacing_x / -2 : 0;<span></span>
+<span></span>
+        for (int star = 0; star &lt; starsPerRow; star++) {<span></span>
+            int x = star_start_x + star * star_spacing_x + offset_x;<span></span>
+<span></span>
+            // 旋转角度（以弧度为单位）<span></span>
+            double rotation_angle = M_PI / 5; // 忘記多少度的旋转<span></span>
+<span></span>
+            int y = star_start_y + row * star_spacing_y;<span></span>
+            draw_star(img, x, y, star_size, white, rotation_angle);<span></span>
+        }<span></span>
+    }<span></span>
+}<span></span>
+<span></span>
+void draw_star(gdImagePtr img, int x, int y, int size, int color, double rotation_angle) {<span></span>
+    gdPoint points[10];<span></span>
+<span></span>
+    for (int i = 0; i &lt; 10; i++) {<span></span>
+        double angle = M_PI / 2 + i * 2 * M_PI / 10 + rotation_angle;<span></span>
+        int radius = (i % 2 == 0) ? size : size / 2;<span></span>
+        points[i].x = x + radius * cos(angle);<span></span>
+        points[i].y = y + radius * sin(angle);<span></span>
+    }<span></span>
+<span></span>
+    // 用指定的颜色填充星星<span></span>
+    gdImageFilledPolygon(img, points, 10, color);<span></span>
 }</pre>
 <p><img alt="" height="211" src="/images/usa_flag.png" width="400"/></p>
-<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
-#include &lt;gd.h&gt;
-#include &lt;math.h&gt;
- 
-void draw_japan_flag(gdImagePtr img);
-void draw_red_sun(gdImagePtr img, int x, int y, int size, int color);
- 
-int main() {
-    int originalWidth = 1200;
-    int originalHeight = (int)(originalWidth * 2.0 / 3.0);
-    gdImagePtr img = gdImageCreateTrueColor(originalWidth, originalHeight);
-    gdImageAlphaBlending(img, 0);
- 
-    draw_japan_flag(img);
- 
-    // 新的宽度和高度以适应 "images" 文件夹
-    int newWidth = 600;
-    int newHeight = (int)(newWidth * 2.0 / 3.0);
- 
-    // 创建新图像并进行缩放
-    gdImagePtr resizedImage = gdImageCreateTrueColor(newWidth, newHeight);
-    gdImageAlphaBlending(resizedImage, 0);
-    gdImageCopyResampled(resizedImage, img, 0, 0, 0, 0, newWidth, newHeight, originalWidth, originalHeight);
- 
-  FILE *outputFile = fopen("./../images/japan_flag.png", "wb");
-    if (outputFile == NULL) {
-        fprintf(stderr, "Error opening the output file.\n");
-        return 1;
-    }
-    gdImagePng(resizedImage, outputFile);
-    fclose(outputFile);
-    gdImageDestroy(img);
-    gdImageDestroy(resizedImage);
- 
-    return 0;
-}
- 
-void draw_japan_flag(gdImagePtr img) {
-    int width = gdImageSX(img);
-    int height = gdImageSY(img);
- 
-    // 创建一个白色背景
-    int white = gdImageColorAllocate(img, 255, 255, 255);
-    gdImageFilledRectangle(img, 0, 0, width - 1, height - 1, white);
- 
-    // 绘制红色圆圈（太阳）
-    int red = gdImageColorAllocate(img, 255, 0, 0);
-    int center_x = width / 2;
-    int center_y = height / 2;
-    int radius = (int)((width * 2) / 3);
-    draw_red_sun(img, center_x, center_y, radius, red);
-}
- 
-void draw_red_sun(gdImagePtr img, int x, int y, int size, int color) {
-  // 減小 size 的值,例如將他的值減半
-  size = size / 2;
-    gdImageArc(img, x, y, size, size, 0, 360, color);
-    gdImageFillToBorder(img, x, y, color, color);
-}
+<pre class="brush:cpp;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;<span></span>
+#include &lt;gd.h&gt;<span></span>
+#include &lt;math.h&gt;<span></span>
+ <span></span>
+void draw_japan_flag(gdImagePtr img);<span></span>
+void draw_red_sun(gdImagePtr img, int x, int y, int size, int color);<span></span>
+ <span></span>
+int main() {<span></span>
+    int originalWidth = 1200;<span></span>
+    int originalHeight = (int)(originalWidth * 2.0 / 3.0);<span></span>
+    gdImagePtr img = gdImageCreateTrueColor(originalWidth, originalHeight);<span></span>
+    gdImageAlphaBlending(img, 0);<span></span>
+ <span></span>
+    draw_japan_flag(img);<span></span>
+ <span></span>
+    // 新的宽度和高度以适应 "images" 文件夹<span></span>
+    int newWidth = 600;<span></span>
+    int newHeight = (int)(newWidth * 2.0 / 3.0);<span></span>
+ <span></span>
+    // 创建新图像并进行缩放<span></span>
+    gdImagePtr resizedImage = gdImageCreateTrueColor(newWidth, newHeight);<span></span>
+    gdImageAlphaBlending(resizedImage, 0);<span></span>
+    gdImageCopyResampled(resizedImage, img, 0, 0, 0, 0, newWidth, newHeight, originalWidth, originalHeight);<span></span>
+ <span></span>
+  FILE *outputFile = fopen("./../images/japan_flag.png", "wb");<span></span>
+    if (outputFile == NULL) {<span></span>
+        fprintf(stderr, "Error opening the output file.\n");<span></span>
+        return 1;<span></span>
+    }<span></span>
+    gdImagePng(resizedImage, outputFile);<span></span>
+    fclose(outputFile);<span></span>
+    gdImageDestroy(img);<span></span>
+    gdImageDestroy(resizedImage);<span></span>
+ <span></span>
+    return 0;<span></span>
+}<span></span>
+ <span></span>
+void draw_japan_flag(gdImagePtr img) {<span></span>
+    int width = gdImageSX(img);<span></span>
+    int height = gdImageSY(img);<span></span>
+ <span></span>
+    // 创建一个白色背景<span></span>
+    int white = gdImageColorAllocate(img, 255, 255, 255);<span></span>
+    gdImageFilledRectangle(img, 0, 0, width - 1, height - 1, white);<span></span>
+ <span></span>
+    // 绘制红色圆圈（太阳）<span></span>
+    int red = gdImageColorAllocate(img, 255, 0, 0);<span></span>
+    int center_x = width / 2;<span></span>
+    int center_y = height / 2;<span></span>
+    int radius = (int)((width * 2) / 3);<span></span>
+    draw_red_sun(img, center_x, center_y, radius, red);<span></span>
+}<span></span>
+ <span></span>
+void draw_red_sun(gdImagePtr img, int x, int y, int size, int color) {<span></span>
+  // 減小 size 的值,例如將他的值減半<span></span>
+  size = size / 2;<span></span>
+    gdImageArc(img, x, y, size, size, 0, 360, color);<span></span>
+    gdImageFillToBorder(img, x, y, color, color);<span></span>
+}<span></span>
 </pre>
-<p><img alt="" height="267" src="/images/japan_flag.png" width="400"/></p><h1>w13</h1>
+<p><img alt="" height="267" src="/images/japan_flag.png" width="400"/></p>
+<h1>w13</h1>
 <p>課程內容有點難理解，不懂的地方只能反覆觀看老師的教學的影片，從開學到現在目前學到最印象深刻的是利用C語言繪製國旗，繪製國旗得過程中常出現程式錯誤導致國旗的圖案發生錯誤，有時即使觀看老師的影片也不知道到底該如何解決，之後我詢問班上的同學慢慢抓到書寫程式的訣竅，最後國旗也順利地繪製出來了。</p>
 <p>接下來的小組合作中，我與同組成員分享想法，討論出各種不同的解決方案，我相信與小組成員互相討論定可增進我和組員輸寫C語言的能力。</p>
 <p>計算機課程豐富我的專業知識，期望接下來的課程可以學到更多新知識，我期待將學到的技能運用到未來的科技上，並且在程式設計上更進一步成長進步。</p>
@@ -357,15 +365,15 @@ void draw_red_sun(gdImagePtr img, int x, int y, int size, int color) {
 <p>這個頁面 demo 如何在同一頁面下納入多個線上 Ace 編輯器與執行按鈕 (<a href="/downloads/practice_html.txt">practice_html.txt</a> 動態頁面超文件).</p>
 <p><a href="/downloads/practice_html.txt">practice_html.txt</a> 動態頁面超文件應該可以在啟動 Brython 時, 設定將 .py 檔案放入 downloads/py 目錄中引用.</p>
 <p>亦即將所有對應的 html 也使用 Brython 產生, 然後寫為 <a href="https://docs.python.org/3/tutorial/classes.html">class</a> 後, 在範例導入時透過 <a href="https://docs.python.org/3/tutorial/classes.html#instance-objects">instance</a> 引用.</p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;!-- 啟動 Brython --&gt;
-&lt;script&gt;
-window.onload=function(){
-brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
-}
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">&lt;!-- 啟動 Brython --&gt;<span></span>
+&lt;script&gt;<span></span>
+window.onload=function(){<span></span>
+brython({debug:1, pythonpath:['/static/','./../downloads/py/']});<span></span>
+}<span></span>
 &lt;/script&gt;</pre>
 <p>從 1 累加到 100:</p>
 <p><button id="add1to100">1 add to 100</button></p>
-<p>將 iterable 與 iterator <a href="https://home.gamer.com.tw/creationDetail.php?sn=4337438">相關說明</a>, 利用 Brython 與 Ace Editor 整理在這個頁面.</p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">將 iterable 與 iterator</span></span><a href="https://home.gamer.com.tw/creationDetail.php?sn=4337438"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">相關說明</span></span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">，利用 Brython 與 Ace Editor 整理在此頁面。</span></span></p>
 <!-- 導入 brython 程式庫 -->
 <p>
 <script src="/static/brython.js"></script>
@@ -478,11 +486,11 @@ doc["add1to100"].bind('click', add)
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
 <p><!-- 存擋表單開始 --></p>
-<form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
+<form><label><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">檔案名稱：</span></span><input id="kw_filename" placeholder="輸入檔名" type="text"/><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">.py</span></span></label> <span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="保存"/></span></span></form>
 <p><!-- 存擋表單結束 --></p>
 <p></p>
 <p><!-- 執行與清除按鈕開始 --></p>
-<p><button id="kw_run1">Run</button> <button id="kw_show_console1">Output</button> <button id="kw_clear_console1">清除輸出區</button><button id="clear_bd1">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<p><button id="kw_run1"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">跑步</span></span></button> <button id="kw_show_console1"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">輸出</span></span></button> <button id="kw_clear_console1"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">明確輸出區</span></span></button><button id="clear_bd1"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">清晰的繪圖區</span></span></button><button onclick="window.location.reload()"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">重新載入</span></span></button></p>
 <p><!-- 執行與清除按鈕結束 --></p>
 <p></p>
 <p><!-- 程式執行 ouput 區 --></p>
@@ -490,8 +498,8 @@ doc["add1to100"].bind('click', add)
 <p><!-- Brython 程式執行的結果, 都以 brython_div1 作為切入位置 --></p>
 <div id="brython_div1"></div>
 <!-- editor1 結束 --><hr/><!-- ########################################## -->
-<p>從 1 累加到 100 part2:</p>
-<p><button id="add1to100part2">1 add to 100</button><button id="cango_three_gears">cango_three_gears</button><button id="bsnake">BSnake</button><button id="aitetris">AI Tetris</button><button id="threejsblock">Rotating Block</button></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">從1累加到100第2部分：</span></span></p>
+<p><button id="add1to100part2"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">1 加到 100</span></span></button><button id="cango_three_gears"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">cango_三_齒輪</span></span></button><button id="bsnake"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">BS蛇</span></span></button><button id="aitetris"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">人工智慧俄羅斯方塊</span></span></button><button id="threejsblock"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">旋轉塊</span></span></button></p>
 <p><!-- 請注意, 這裡使用 Javascript 將 localStorage["kw_py_src2"] 中存在近端瀏覽器的程式碼, 由使用者決定存檔名稱--></p>
 <p>
 <script type="text/python3">
@@ -597,11 +605,11 @@ doc["threejsblock"].bind("click", threejsblock.do)
 <div id="kw_editor2" style="width: 600px; height: 300px;"></div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
 <p><!-- 存擋表單開始 --></p>
-<form><label>Filename: <input id="kw_filename2" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src2', 'kw_filename2');" type="submit" value="Save"/></form>
+<form><label><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">檔案名稱：</span></span><input id="kw_filename2" placeholder="輸入檔名" type="text"/><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">.py</span></span></label> <span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><input onclick="doSave('kw_py_src2', 'kw_filename2');" type="submit" value="保存"/></span></span></form>
 <p><!-- 存擋表單結束 --></p>
 <p></p>
 <p><!-- 執行與清除按鈕開始 --></p>
-<p><button id="kw_run2">Run</button> <button id="kw_show_console2">Output</button> <button id="kw_clear_console2">清除輸出區</button><button id="clear_bd2">清除繪圖區</button><button onclick="window.location.reload()">Reload</button></p>
+<p><button id="kw_run2"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">跑步</span></span></button> <button id="kw_show_console2"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">輸出</span></span></button> <button id="kw_clear_console2"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">明確輸出區</span></span></button><button id="clear_bd2"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">清晰的繪圖區</span></span></button><button onclick="window.location.reload()"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">重新載入</span></span></button></p>
 <p><!-- 執行與清除按鈕結束 --></p>
 <p></p>
 <p><!-- 程式執行 ouput 區 --></p>
