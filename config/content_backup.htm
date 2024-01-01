@@ -312,7 +312,30 @@
 <p>}</p>
 <p>void draw_white_sun(gdImagePtr img, int center_x, int center_y, int sun_radius, int color) {<br/> // M_PI 大小定義於 math.h 標頭檔中, 因為三角函數中採用徑度為角度單位<br/> // 因此定義將角度轉為徑度的轉換變數為 deg, 角度值乘上 deg 就可轉為徑度<br/> float deg = M_PI/180;<br/> // 根據十二道光芒的每一尖角的角度為 15 度, 求出其對應直角三角形的另一角度為 75 度<br/> // 求出十二道光芒中任一菱形的 small radius, 也就是菱形的另一個對應小圓的半徑大小<br/> float sr = sun_radius/tan(75*deg);<br/> int ax, ay, bx, by, dx, dy, ex, ey;<br/> gdPoint points[4];<br/> /* 在塗上十二道光芒中的單一菱形區域之前, 先以座標點畫線測試是否正確<br/> ax = center_x;<br/> ay = center_y - sun_radius;<br/> bx = center_x - sun_radius*tan(15*deg);<br/> by = center_y;<br/> ex = center_x;<br/> ey = center_y + sun_radius;<br/> dx = center_x + sun_radius*tan(15*deg);<br/> dy = center_y;<br/> // AB<br/> gdImageLine(img, ax, ay, bx, by, color);<br/> // BE<br/> gdImageLine(img, bx, by, ex, ey, color);<br/> // ED<br/> gdImageLine(img, ex, ey, dx, dy, color);<br/> // DA<br/> gdImageLine(img, dx, dy, ax, ay, color);<br/> */<br/> ax = center_x;<br/> ay = center_y - sun_radius;<br/> bx = center_x - sun_radius*tan(15*deg);<br/> by = center_y;<br/> ex = center_x;<br/> ey = center_y + sun_radius;<br/> dx = center_x + sun_radius*tan(15*deg);<br/> dy = center_y;<br/> // 確定單一菱形區域的塗色正確後, 利用迴圈每次轉動 30 度, 總共轉六次即可塗上十二道光芒區域<br/> for (int i=1;i&lt;=6;i++){<br/> // A<br/> points[0].x = ax+sun_radius*sin(30*deg*i);<br/> points[0].y = ay+sun_radius-sun_radius*cos(30*deg*i);<br/> // B<br/> points[1].x = bx+sr-sr*cos(30*deg*i);<br/> points[1].y = by-sr*sin(30*deg*i);<br/> // E<br/> points[2].x = ex-sun_radius*sin(30*deg*i);<br/> points[2].y = ey-(sun_radius-sun_radius*cos(30*deg*i));<br/> // D<br/> points[3].x = dx-(sr-sr*cos(30*deg*i));<br/> points[3].y = dy+sr*sin(30*deg*i);<br/> // 對菱形區域範圍塗色<br/> gdImageFilledPolygon(img, points, 4, color);<br/> // 在菱形區域外圍畫線, 明確界定菱形範圍<br/> gdImagePolygon(img, points, 4, color);<br/> }<br/>}</p>
 <p><img alt="" height="267" src="/images/roc_flag_in_gd.png" width="400"/></p>
-<h3>USA</h3><h2>W7</h2>
+<h3>USA</h3>
+<p>#include &lt;stdio.h&gt;<br/>#include &lt;gd.h&gt;<br/>#include &lt;math.h&gt;</p>
+<p>void draw_usa_flag(gdImagePtr img);<br/>void draw_star(gdImagePtr img, int x, int y, int size, int color, double rotation_angle);</p>
+<p>int main() {<br/> int width = 800;<br/> int height = (int)(width / 1.9);</p>
+<p>gdImagePtr img = gdImageCreateTrueColor(width, height);<br/> gdImageAlphaBlending(img, 0);</p>
+<p>draw_usa_flag(img);</p>
+<p>FILE *outputFile = fopen("./../images/usa_flag.png", "wb");<br/> if (outputFile == NULL) {<br/> fprintf(stderr, "打开输出文件时出错。\n");<br/> return 1;<br/> }</p>
+<p>gdImagePngEx(img, outputFile, 9);<br/> fclose(outputFile);<br/> gdImageDestroy(img);</p>
+<p>return 0;<br/>}</p>
+<p>void draw_usa_flag(gdImagePtr img) {<br/> int width = gdImageSX(img);<br/> int height = gdImageSY(img);<br/> int red, white, blue;<br/> // 国旗颜色<br/> red = gdImageColorAllocate(img, 178, 34, 52); // 红色条纹<br/> white = gdImageColorAllocate(img, 255, 255, 255); // 白色条纹<br/> blue = gdImageColorAllocate(img, 60, 59, 110); // 蓝色矩形</p>
+<p>int stripe_height = height / 13;<br/> int stripe_width = width;<br/> int star_size = (int)(0.0308 * height); // 星星大小</p>
+<p>for (int y = 0; y &lt; height; y += stripe_height) {<br/> if (y / stripe_height % 2 == 0) {<br/> gdImageFilledRectangle(img, 0, y, stripe_width, y + stripe_height, red);<br/> } else {<br/> gdImageFilledRectangle(img, 0, y, stripe_width, y + stripe_height, white);<br/> }<br/> }</p>
+<p>gdImageFilledRectangle(img, 0, 0, width * 2 / 5, stripe_height * 7, blue);</p>
+<p>int star_spacing_x = (int)(0.129 * height); // 横向星星之间的间距<br/> int star_spacing_y = (int)(0.054 * height); // 纵向星星之间的间距<br/> int star_start_x = (int)(0.125 * height); // 星星的起始X位置<br/> int star_start_y = (int)(0.0485 * height); // 星星的起始Y位置</p>
+<p>for (int row = 0; row &lt; 9; row++) {<br/> int starsPerRow = (row % 2 == 0) ? 6 : 5;</p>
+<p>// 计算2、4、6和8排星星的偏移量<br/> int offset_x = (row % 2 == 0) ? star_spacing_x / -2 : 0;</p>
+<p>for (int star = 0; star &lt; starsPerRow; star++) {<br/> int x = star_start_x + star * star_spacing_x + offset_x;</p>
+<p>// 旋转角度（以弧度为单位）<br/> double rotation_angle = M_PI / 5; // 忘記多少度的旋转</p>
+<p>int y = star_start_y + row * star_spacing_y;<br/> draw_star(img, x, y, star_size, white, rotation_angle);<br/> }<br/> }<br/>}</p>
+<p>void draw_star(gdImagePtr img, int x, int y, int size, int color, double rotation_angle) {<br/> gdPoint points[10];</p>
+<p>for (int i = 0; i &lt; 10; i++) {<br/> double angle = M_PI / 2 + i * 2 * M_PI / 10 + rotation_angle;<br/> int radius = (i % 2 == 0) ? size : size / 2;<br/> points[i].x = x + radius * cos(angle);<br/> points[i].y = y + radius * sin(angle);<br/> }</p>
+<p>// 用指定的颜色填充星星<br/> gdImageFilledPolygon(img, points, 10, color);<br/>}</p>
+<p><img alt="" height="211" src="/images/usa_flag.png" width="400"/></p>
+<h3>Japan</h3><h2>W7</h2>
 <h2>W10</h2><h1>W2</h1>
 <p><strong><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><a href="https://nfuedu-my.sharepoint.com/:v:/g/personal/yen_nfu_edu_tw/EflMzDYwTjdIm2KJB7SCYkwB1_6UTQ4mzUdDx-bwN22E8A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&amp;e=ZN0EPP"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">說明安裝Apps、如何設定網路道路、查驗是否正確連網</span></span></span></span></span></span></a></span></span></strong></p>
 <p><strong><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><a href="https://nfuedu-my.sharepoint.com/:v:/g/personal/yen_nfu_edu_tw/Ef4xqA-zGsxFlnrsIq1WhRQBt7HalMhjXLb5hzLRmprYOQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&amp;e=a7Oaxo"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">說明如何利用近端可攜系統執行C程序、如何利用ChatGPT進行對話</span></span></span></span></span></span></a></span></span></strong></p>
