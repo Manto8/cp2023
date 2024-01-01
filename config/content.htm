@@ -349,7 +349,29 @@
 <p>// 绘制红色圆圈（太阳）<br/> int red = gdImageColorAllocate(img, 255, 0, 0);<br/> int center_x = width / 2;<br/> int center_y = height / 2;<br/> int radius = (int)((width * 2) / 3);<br/> draw_red_sun(img, center_x, center_y, radius, red);<br/>}</p>
 <p>void draw_red_sun(gdImagePtr img, int x, int y, int size, int color) {<br/> // 減小 size 的值,例如將他的值減半<br/> size = size / 2;<br/> gdImageArc(img, x, y, size, size, 0, 360, color);<br/> gdImageFillToBorder(img, x, y, color, color);<br/>}</p>
 <p><img alt="" height="267" src="/images/japan_flag.png" width="400"/></p>
-<h3>PROC</h3><h2>W7</h2>
+<h3>PROC</h3>
+<p>#include &lt;stdio.h&gt;<br/>#include &lt;gd.h&gt;<br/>#include &lt;math.h&gt;</p>
+<p>void draw_chinese_flag(gdImagePtr img);</p>
+<p>int main() {<br/> int width = 300; // 國旗寬度<br/> int height = 200; // 國旗高度</p>
+<p>gdImagePtr im = gdImageCreateTrueColor(width, height);<br/> gdImageAlphaBlending(im, 0);</p>
+<p>draw_chinese_flag(im);</p>
+<p>FILE *outputFile = fopen("./../images/proc_flag.png", "wb");<br/> if (outputFile == NULL) {<br/> fprintf(stderr, "打开输出文件时出错。\n");<br/> return 1;<br/> }</p>
+<p>gdImagePngEx(im, outputFile, 9);<br/> fclose(outputFile);<br/> gdImageDestroy(im);</p>
+<p>return 0;<br/>}</p>
+<p>// 声明 draw_star 函数<br/>void draw_star(gdImagePtr img, int x, int y, int size, int color, double rotation_angle);</p>
+<p>void draw_chinese_flag(gdImagePtr img) {<br/> int width = gdImageSX(img);<br/> int height = gdImageSY(img);<br/> int red, yellow;</p>
+<p>// 國旗顏色<br/> red = gdImageColorAllocate(img, 255, 0, 0); // 紅色背景<br/> yellow = gdImageColorAllocate(img, 255, 255, 0); // 黃色星星</p>
+<p>// 畫紅色背景<br/> gdImageFilledRectangle(img, 0, 0, width, height, red);</p>
+<p>// 設置星星的大小和位置<br/> int star_size = (int)(0.28 * height);<br/> int star_x = (int)(0.165 * width);<br/> int star_y = (int)(0.265 * height);</p>
+<p>// 畫大星星<br/> draw_star(img, star_x, star_y, star_size, yellow, 11.0);</p>
+<p>// 繪製小星星，位置根據實際國旗比例計算<br/> double radius = 0.15 * height;<br/> double angle = 360 / 7 * M_PI / 179.0;<br/> double rotation = -M_PI / 7.5;<br/> int cx = (int)(0.32 * width);<br/> int cy = (int)(0.27 * height);</p>
+<p>for (int i = -1; i &lt; 3; i++) {<br/> int x = (int)(cx + radius * cos(i * angle + rotation));<br/> int y = (int)(cy + radius * sin(i * angle + rotation));<br/> draw_star(img, x, y, 19, yellow, M_PI / 5.0);<br/> }<br/>}</p>
+<p>void draw_star(gdImagePtr img, int x, int y, int size, int color, double rotation_angle) {<br/> gdPoint points[10];</p>
+<p>// 计算星形的五个外点和五个内点<br/> double outer_radius = size / 2;<br/> double inner_radius = size / 6;<br/> double angle = M_PI / 5.0;</p>
+<p>for (int i = 0; i &lt; 10; i++) {<br/> double radius = (i % 2 == 0) ? outer_radius : inner_radius;<br/> double theta = rotation_angle + i * angle;<br/> points[i].x = x + radius * cos(theta);<br/> points[i].y = y + radius * sin(theta);<br/> }</p>
+<p>// 使用 gdImageFilledPolygon 绘制星形<br/> gdImageFilledPolygon(img, points, 10, color);<br/>}</p>
+<p><img alt="" height="267" src="/images/proc_flag.png" width="400"/></p>
+<h3>Uk</h3><h2>W7</h2>
 <h2>W10</h2><h1>W2</h1>
 <p><strong><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><a href="https://nfuedu-my.sharepoint.com/:v:/g/personal/yen_nfu_edu_tw/EflMzDYwTjdIm2KJB7SCYkwB1_6UTQ4mzUdDx-bwN22E8A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&amp;e=ZN0EPP"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">說明安裝Apps、如何設定網路道路、查驗是否正確連網</span></span></span></span></span></span></a></span></span></strong></p>
 <p><strong><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><a href="https://nfuedu-my.sharepoint.com/:v:/g/personal/yen_nfu_edu_tw/Ef4xqA-zGsxFlnrsIq1WhRQBt7HalMhjXLb5hzLRmprYOQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0RpcmVjdCJ9fQ&amp;e=a7Oaxo"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">說明如何利用近端可攜系統執行C程序、如何利用ChatGPT進行對話</span></span></span></span></span></span></a></span></span></strong></p>
