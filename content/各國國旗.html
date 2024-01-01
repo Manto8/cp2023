@@ -1,0 +1,624 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>cmsite</title>
+        <meta charset="utf-8">
+<meta property="head" content="H1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 客製化關閉 -->
+        <!--
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        -->
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushMojo.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container">
+                <div class="row align-items-center">
+                <h1>41223117 cp2023</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">41223117 cp2023</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">SMap</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='關於.html'>關於</a><li><a href='W2.html'>W2</a><li><a href='W3.html'>W3</a><li><a href='W4.html'>W4</a><li><a href='W5.html'>W5</a><li><a href='W6.html'>W6</a><li><a href='W7.html'>W7</a><li><a href='W10.html'>W10</a><li><a href='W12.html'>W12</a><li><a href='W13.html'>W13</a><li><a href='各國國旗.html'>各國國旗</a><li><a href='課程評分.html'>課程評分</a><li><a href='SSH.html'>SSH</a><li><a href='KEY.html'>KEY</a><li><a href='布萊頓.html'>布萊頓</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">W13 << <a href='W13.html'>Previous</a> <a href='課程評分.html'>Next</a> >> 課程評分<br /><h1>各國國旗</h1>
+<div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;stdio.h&gt;</code></div>
+<div class="line number2 index1 alt1"><code class="cpp preprocessor">#include &lt;gd.h&gt;</code></div>
+<div class="line number3 index2 alt2"> </div>
+<div class="line number4 index3 alt1"><code class="cpp preprocessor">#define WIDTH 600</code></div>
+<div class="line number5 index4 alt2"><code class="cpp preprocessor">#define HEIGHT 400</code></div>
+<div class="line number6 index5 alt1"><code class="cpp preprocessor">#define BLACK 0x000000  // Black color</code></div>
+<div class="line number7 index6 alt2"><code class="cpp preprocessor">#define YELLOW 0xFFD100 // Yellow color</code></div>
+<div class="line number8 index7 alt1"><code class="cpp preprocessor">#define RED 0xED2939    // Red color</code></div>
+<div class="line number9 index8 alt2"> </div>
+<div class="line number10 index9 alt1"><code class="cpp keyword bold">void</code> <code class="cpp plain">drawBelgiumFlag() {</code></div>
+<div class="line number11 index10 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImagePtr im;</code></div>
+<div class="line number12 index11 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">FILE</code> <code class="cpp plain">*output;</code></div>
+<div class="line number13 index12 alt2"> </div>
+<div class="line number14 index13 alt1"><code class="cpp spaces">    </code><code class="cpp plain">im = gdImageCreateTrueColor(WIDTH, HEIGHT);</code></div>
+<div class="line number15 index14 alt2"><code class="cpp spaces">    </code><code class="cpp plain">output = </code><code class="cpp functions bold">fopen</code><code class="cpp plain">(</code><code class="cpp string">"belgium_flag.png"</code><code class="cpp plain">, </code><code class="cpp string">"wb"</code><code class="cpp plain">);</code></div>
+<div class="line number16 index15 alt1"> </div>
+<div class="line number17 index16 alt2"><code class="cpp spaces">    </code><code class="cpp comments">// Allocate black, yellow, and red colors</code></div>
+<div class="line number18 index17 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">blackIndex = gdImageColorAllocate(im, (BLACK &gt;&gt; 16) &amp; 0xFF, (BLACK &gt;&gt; 8) &amp; 0xFF, BLACK &amp; 0xFF);</code></div>
+<div class="line number19 index18 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">yellowIndex = gdImageColorAllocate(im, (YELLOW &gt;&gt; 16) &amp; 0xFF, (YELLOW &gt;&gt; 8) &amp; 0xFF, YELLOW &amp; 0xFF);</code></div>
+<div class="line number20 index19 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">redIndex = gdImageColorAllocate(im, (RED &gt;&gt; 16) &amp; 0xFF, (RED &gt;&gt; 8) &amp; 0xFF, RED &amp; 0xFF);</code></div>
+<div class="line number21 index20 alt2"> </div>
+<div class="line number22 index21 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Draw black left third</code></div>
+<div class="line number23 index22 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledRectangle(im, 0, 0, WIDTH / 3 - 1, HEIGHT - 1, blackIndex);</code></div>
+<div class="line number24 index23 alt1"> </div>
+<div class="line number25 index24 alt2"><code class="cpp spaces">    </code><code class="cpp comments">// Draw yellow middle third</code></div>
+<div class="line number26 index25 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledRectangle(im, WIDTH / 3, 0, 2 * WIDTH / 3 - 1, HEIGHT - 1, yellowIndex);</code></div>
+<div class="line number27 index26 alt2"> </div>
+<div class="line number28 index27 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Draw red right third</code></div>
+<div class="line number29 index28 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledRectangle(im, 2 * WIDTH / 3, 0, WIDTH - 1, HEIGHT - 1, redIndex);</code></div>
+<div class="line number30 index29 alt1"> </div>
+<div class="line number31 index30 alt2"><code class="cpp spaces">    </code><code class="cpp comments">// Save the image</code></div>
+<div class="line number32 index31 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImagePng(im, output);</code></div>
+<div class="line number33 index32 alt2"><code class="cpp spaces">    </code><code class="cpp functions bold">fclose</code><code class="cpp plain">(output);</code></div>
+<div class="line number34 index33 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImageDestroy(im);</code></div>
+<div class="line number35 index34 alt2"><code class="cpp plain">}</code></div>
+<div class="line number36 index35 alt1"> </div>
+<div class="line number37 index36 alt2"><code class="cpp color1 bold">int</code> <code class="cpp plain">main() {</code></div>
+<div class="line number38 index37 alt1"><code class="cpp spaces">    </code><code class="cpp plain">drawBelgiumFlag();</code></div>
+<div class="line number39 index38 alt2"><code class="cpp spaces">    </code><code class="cpp keyword bold">return</code> <code class="cpp plain">0;</code></div>
+<div class="line number40 index39 alt1"><code class="cpp plain">}</code></div>
+<div class="line number40 index39 alt1"><code class="cpp plain"><img alt="" height="267" src="./../images/belgium_flag.png" width="400"/></code></div>
+<div class="line number40 index39 alt1">
+<div>
+<div class="syntaxhighlighter cpp" id="highlighter_796545">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;stdio.h&gt;</code></div>
+<div class="line number2 index1 alt1"><code class="cpp preprocessor">#include &lt;gd.h&gt;</code></div>
+<div class="line number3 index2 alt2"> </div>
+<div class="line number4 index3 alt1"><code class="cpp color1 bold">int</code> <code class="cpp plain">main() {</code></div>
+<div class="line number5 index4 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">width = 300;  </code><code class="cpp comments">// 宽度</code></div>
+<div class="line number6 index5 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">height = 200; </code><code class="cpp comments">// 高度</code></div>
+<div class="line number7 index6 alt2"> </div>
+<div class="line number8 index7 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImagePtr image = gdImageCreateTrueColor(width, height);</code></div>
+<div class="line number9 index8 alt2"> </div>
+<div class="line number10 index9 alt1"><code class="cpp spaces">    </code><code class="cpp keyword bold">if</code> <code class="cpp plain">(image == NULL) {</code></div>
+<div class="line number11 index10 alt2"><code class="cpp spaces">        </code><code class="cpp functions bold">printf</code><code class="cpp plain">(</code><code class="cpp string">"Failed to create image.\n"</code><code class="cpp plain">);</code></div>
+<div class="line number12 index11 alt1"><code class="cpp spaces">        </code><code class="cpp keyword bold">return</code> <code class="cpp plain">1;</code></div>
+<div class="line number13 index12 alt2"><code class="cpp spaces">    </code><code class="cpp plain">}</code></div>
+<div class="line number14 index13 alt1"> </div>
+<div class="line number15 index14 alt2"><code class="cpp spaces">    </code><code class="cpp comments">// 确定颜色索引</code></div>
+<div class="line number16 index15 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">green = gdImageColorAllocate(image, 0, 128, 0);</code></div>
+<div class="line number17 index16 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">white = gdImageColorAllocate(image, 255, 255, 255);</code></div>
+<div class="line number18 index17 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">red = gdImageColorAllocate(image, 255, 0, 0);</code></div>
+<div class="line number19 index18 alt2"> </div>
+<div class="line number20 index19 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// 填充颜色</code></div>
+<div class="line number21 index20 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledRectangle(image, 0, 0, width / 3, height, green);</code></div>
+<div class="line number22 index21 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledRectangle(image, width / 3, 0, (width / 3) * 2, height, white);</code></div>
+<div class="line number23 index22 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledRectangle(image, (width / 3) * 2, 0, width, height, red);</code></div>
+<div class="line number24 index23 alt1"> </div>
+<div class="line number25 index24 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">FILE</code> <code class="cpp plain">*outputFile;</code></div>
+<div class="line number26 index25 alt1"><code class="cpp spaces">    </code><code class="cpp plain">outputFile = </code><code class="cpp functions bold">fopen</code><code class="cpp plain">(</code><code class="cpp string">"./../images/italian_flag.png"</code><code class="cpp plain">, </code><code class="cpp string">"wb"</code><code class="cpp plain">);</code></div>
+<div class="line number27 index26 alt2"> </div>
+<div class="line number28 index27 alt1"><code class="cpp spaces">    </code><code class="cpp keyword bold">if</code> <code class="cpp plain">(outputFile == NULL) {</code></div>
+<div class="line number29 index28 alt2"><code class="cpp spaces">        </code><code class="cpp functions bold">printf</code><code class="cpp plain">(</code><code class="cpp string">"Failed to open file for writing.\n"</code><code class="cpp plain">);</code></div>
+<div class="line number30 index29 alt1"><code class="cpp spaces">        </code><code class="cpp keyword bold">return</code> <code class="cpp plain">1;</code></div>
+<div class="line number31 index30 alt2"><code class="cpp spaces">    </code><code class="cpp plain">}</code></div>
+<div class="line number32 index31 alt1"> </div>
+<div class="line number33 index32 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImagePng(image, outputFile);</code></div>
+<div class="line number34 index33 alt1"><code class="cpp spaces">    </code><code class="cpp functions bold">fclose</code><code class="cpp plain">(outputFile);</code></div>
+<div class="line number35 index34 alt2"> </div>
+<div class="line number36 index35 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImageDestroy(image);</code></div>
+<div class="line number37 index36 alt2"> </div>
+<div class="line number38 index37 alt1"><code class="cpp spaces">    </code><code class="cpp keyword bold">return</code> <code class="cpp plain">0;</code></div>
+<div class="line number39 index38 alt2"><code class="cpp plain">}</code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<img alt="" height="267" src="./../images/italian_flag.png" width="400"/></div>
+<div class="line number40 index39 alt1">
+<div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;stdio.h&gt;</code></div>
+<div class="line number2 index1 alt1"><code class="cpp preprocessor">#include &lt;gd.h&gt;</code></div>
+<div class="line number3 index2 alt2"><code class="cpp preprocessor">#include &lt;math.h&gt;</code></div>
+<div class="line number4 index3 alt1"> </div>
+<div class="line number5 index4 alt2"><code class="cpp preprocessor">#define WIDTH 600</code></div>
+<div class="line number6 index5 alt1"><code class="cpp preprocessor">#define HEIGHT 400</code></div>
+<div class="line number7 index6 alt2"><code class="cpp preprocessor">#define RED 0xDC143C  // Crimson color</code></div>
+<div class="line number8 index7 alt1"><code class="cpp preprocessor">#define YELLOW 0xFFFF00</code></div>
+<div class="line number9 index8 alt2"> </div>
+<div class="line number10 index9 alt1"><code class="cpp keyword bold">void</code> <code class="cpp plain">drawStar(gdImagePtr im, </code><code class="cpp color1 bold">int</code> <code class="cpp plain">x, </code><code class="cpp color1 bold">int</code> <code class="cpp plain">y, </code><code class="cpp color1 bold">int</code> <code class="cpp plain">outerRadius, </code><code class="cpp color1 bold">int</code> <code class="cpp plain">innerRadius, </code><code class="cpp color1 bold">int</code> <code class="cpp plain">color) {</code></div>
+<div class="line number11 index10 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">double</code> <code class="cpp plain">angle = -M_PI / 2.0;  </code><code class="cpp comments">// Starting angle for the star</code></div>
+<div class="line number12 index11 alt1"> </div>
+<div class="line number13 index12 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdPoint starPoints[10];</code></div>
+<div class="line number14 index13 alt1"> </div>
+<div class="line number15 index14 alt2"><code class="cpp spaces">    </code><code class="cpp keyword bold">for</code> <code class="cpp plain">(</code><code class="cpp color1 bold">int</code> <code class="cpp plain">i = 0; i &lt; 10; i++) {</code></div>
+<div class="line number16 index15 alt1"><code class="cpp spaces">        </code><code class="cpp color1 bold">int</code> <code class="cpp plain">radius = i % 2 == 0 ? outerRadius : innerRadius;</code></div>
+<div class="line number17 index16 alt2"><code class="cpp spaces">        </code><code class="cpp plain">starPoints[i].x = x + radius * </code><code class="cpp functions bold">cos</code><code class="cpp plain">(angle);</code></div>
+<div class="line number18 index17 alt1"><code class="cpp spaces">        </code><code class="cpp plain">starPoints[i].y = y + radius * </code><code class="cpp functions bold">sin</code><code class="cpp plain">(angle);</code></div>
+<div class="line number19 index18 alt2"><code class="cpp spaces">        </code><code class="cpp plain">angle += M_PI / 5.0;  </code><code class="cpp comments">// Angle between two consecutive points</code></div>
+<div class="line number20 index19 alt1"><code class="cpp spaces">    </code><code class="cpp plain">}</code></div>
+<div class="line number21 index20 alt2"> </div>
+<div class="line number22 index21 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledPolygon(im, starPoints, 10, color);</code></div>
+<div class="line number23 index22 alt2"><code class="cpp plain">}</code></div>
+<div class="line number24 index23 alt1"> </div>
+<div class="line number25 index24 alt2"><code class="cpp keyword bold">void</code> <code class="cpp plain">drawVietnamFlag() {</code></div>
+<div class="line number26 index25 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImagePtr im;</code></div>
+<div class="line number27 index26 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">FILE</code> <code class="cpp plain">*output;</code></div>
+<div class="line number28 index27 alt1"> </div>
+<div class="line number29 index28 alt2"><code class="cpp spaces">    </code><code class="cpp plain">im = gdImageCreateTrueColor(WIDTH, HEIGHT);</code></div>
+<div class="line number30 index29 alt1"><code class="cpp spaces">    </code><code class="cpp plain">output = </code><code class="cpp functions bold">fopen</code><code class="cpp plain">(</code><code class="cpp string">"vietnam_flag.png"</code><code class="cpp plain">, </code><code class="cpp string">"wb"</code><code class="cpp plain">);</code></div>
+<div class="line number31 index30 alt2"> </div>
+<div class="line number32 index31 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Draw red background</code></div>
+<div class="line number33 index32 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledRectangle(im, 0, 0, WIDTH - 1, HEIGHT - 1, RED);</code></div>
+<div class="line number34 index33 alt1"> </div>
+<div class="line number35 index34 alt2"><code class="cpp spaces">    </code><code class="cpp comments">// Draw yellow star in the center</code></div>
+<div class="line number36 index35 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">starSize = 60;</code></div>
+<div class="line number37 index36 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">starX = WIDTH / 2;</code></div>
+<div class="line number38 index37 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">starY = HEIGHT / 2;</code></div>
+<div class="line number39 index38 alt2"> </div>
+<div class="line number40 index39 alt1"><code class="cpp spaces">    </code><code class="cpp plain">drawStar(im, starX, starY, starSize, starSize / 2, YELLOW);</code></div>
+<div class="line number41 index40 alt2"> </div>
+<div class="line number42 index41 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImagePng(im, output);</code></div>
+<div class="line number43 index42 alt2"><code class="cpp spaces">    </code><code class="cpp functions bold">fclose</code><code class="cpp plain">(output);</code></div>
+<div class="line number44 index43 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImageDestroy(im);</code></div>
+<div class="line number45 index44 alt2"><code class="cpp plain">}</code></div>
+<div class="line number46 index45 alt1"> </div>
+<div class="line number47 index46 alt2"><code class="cpp color1 bold">int</code> <code class="cpp plain">main() {</code></div>
+<div class="line number48 index47 alt1"><code class="cpp spaces">    </code><code class="cpp plain">drawVietnamFlag();</code></div>
+<div class="line number49 index48 alt2"><code class="cpp spaces">    </code><code class="cpp keyword bold">return</code> <code class="cpp plain">0;</code></div>
+<div class="line number50 index49 alt1"><code class="cpp plain">}</code></div>
+</div>
+<div class="line number40 index39 alt1"><code class="cpp plain"><img alt="" height="267" src="./../images/vietnam_flag.png" width="400"/></code></div>
+<div class="line number40 index39 alt1">
+<div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;stdio.h&gt;</code></div>
+<div class="line number2 index1 alt1"><code class="cpp preprocessor">#include &lt;gd.h&gt;</code></div>
+<div class="line number3 index2 alt2"><code class="cpp preprocessor">#include &lt;math.h&gt;</code></div>
+<div class="line number4 index3 alt1"> </div>
+<div class="line number5 index4 alt2"><code class="cpp preprocessor">#define WIDTH 600</code></div>
+<div class="line number6 index5 alt1"><code class="cpp preprocessor">#define HEIGHT 400</code></div>
+<div class="line number7 index6 alt2"><code class="cpp preprocessor">#define GREEN 0x138808  // Green color</code></div>
+<div class="line number8 index7 alt1"><code class="cpp preprocessor">#define RED 0xE30A17     // Red color</code></div>
+<div class="line number9 index8 alt2"> </div>
+<div class="line number10 index9 alt1"><code class="cpp keyword bold">void</code> <code class="cpp plain">drawBangladeshFlag() {</code></div>
+<div class="line number11 index10 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImagePtr im;</code></div>
+<div class="line number12 index11 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">FILE</code> <code class="cpp plain">*output;</code></div>
+<div class="line number13 index12 alt2"> </div>
+<div class="line number14 index13 alt1"><code class="cpp spaces">    </code><code class="cpp plain">im = gdImageCreateTrueColor(WIDTH, HEIGHT);</code></div>
+<div class="line number15 index14 alt2"><code class="cpp spaces">    </code><code class="cpp plain">output = </code><code class="cpp functions bold">fopen</code><code class="cpp plain">(</code><code class="cpp string">"bangladesh_flag.png"</code><code class="cpp plain">, </code><code class="cpp string">"wb"</code><code class="cpp plain">);</code></div>
+<div class="line number16 index15 alt1"> </div>
+<div class="line number17 index16 alt2"><code class="cpp spaces">    </code><code class="cpp comments">// Draw green background</code></div>
+<div class="line number18 index17 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledRectangle(im, 0, 0, WIDTH - 1, HEIGHT - 1, GREEN);</code></div>
+<div class="line number19 index18 alt2"> </div>
+<div class="line number20 index19 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Draw red circle</code></div>
+<div class="line number21 index20 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">centerX = WIDTH / 2;</code></div>
+<div class="line number22 index21 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">centerY = HEIGHT / 2;</code></div>
+<div class="line number23 index22 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">circleRadius = 100;</code></div>
+<div class="line number24 index23 alt1"> </div>
+<div class="line number25 index24 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledEllipse(im, centerX, centerY, circleRadius * 2, circleRadius * 2, RED);</code></div>
+<div class="line number26 index25 alt1"> </div>
+<div class="line number27 index26 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImagePng(im, output);</code></div>
+<div class="line number28 index27 alt1"><code class="cpp spaces">    </code><code class="cpp functions bold">fclose</code><code class="cpp plain">(output);</code></div>
+<div class="line number29 index28 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImageDestroy(im);</code></div>
+<div class="line number30 index29 alt1"><code class="cpp plain">}</code></div>
+<div class="line number31 index30 alt2"> </div>
+<div class="line number32 index31 alt1"><code class="cpp color1 bold">int</code> <code class="cpp plain">main() {</code></div>
+<div class="line number33 index32 alt2"><code class="cpp spaces">    </code><code class="cpp plain">drawBangladeshFlag();</code></div>
+<div class="line number34 index33 alt1"><code class="cpp spaces">    </code><code class="cpp keyword bold">return</code> <code class="cpp plain">0;</code></div>
+<div class="line number35 index34 alt2"><code class="cpp plain">}</code></div>
+<div class="line number35 index34 alt2"><code class="cpp plain"><img alt="" height="267" src="./../images/bangladesh_flag.png" width="400"/></code></div>
+</div>
+<div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;stdio.h&gt;</code></div>
+<div class="line number2 index1 alt1"><code class="cpp preprocessor">#include &lt;gd.h&gt;</code></div>
+<div class="line number3 index2 alt2"><code class="cpp preprocessor">#include &lt;math.h&gt;</code></div>
+<div class="line number4 index3 alt1"> </div>
+<div class="line number5 index4 alt2"><code class="cpp preprocessor">#define WIDTH 600</code></div>
+<div class="line number6 index5 alt1"><code class="cpp preprocessor">#define HEIGHT 400</code></div>
+<div class="line number7 index6 alt2"><code class="cpp preprocessor">#define RED 0xCE1126    // Red color</code></div>
+<div class="line number8 index7 alt1"><code class="cpp preprocessor">#define WHITE 0xFFFFFF  // White color</code></div>
+<div class="line number9 index8 alt2"><code class="cpp preprocessor">#define BLUE 0x0033A0   // Blue color</code></div>
+<div class="line number10 index9 alt1"> </div>
+<div class="line number11 index10 alt2"><code class="cpp keyword bold">void</code> <code class="cpp plain">drawLaosFlag() {</code></div>
+<div class="line number12 index11 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImagePtr im;</code></div>
+<div class="line number13 index12 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">FILE</code> <code class="cpp plain">*output;</code></div>
+<div class="line number14 index13 alt1"> </div>
+<div class="line number15 index14 alt2"><code class="cpp spaces">    </code><code class="cpp plain">im = gdImageCreateTrueColor(WIDTH, HEIGHT);</code></div>
+<div class="line number16 index15 alt1"><code class="cpp spaces">    </code><code class="cpp plain">output = </code><code class="cpp functions bold">fopen</code><code class="cpp plain">(</code><code class="cpp string">"laos_flag.png"</code><code class="cpp plain">, </code><code class="cpp string">"wb"</code><code class="cpp plain">);</code></div>
+<div class="line number17 index16 alt2"> </div>
+<div class="line number18 index17 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Draw red background</code></div>
+<div class="line number19 index18 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledRectangle(im, 0, 0, WIDTH - 1, HEIGHT - 1, RED);</code></div>
+<div class="line number20 index19 alt1"> </div>
+<div class="line number21 index20 alt2"><code class="cpp spaces">    </code><code class="cpp comments">// Draw blue rectangle (symbolizing the Mekong River)</code></div>
+<div class="line number22 index21 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">blueRectWidth = WIDTH;</code></div>
+<div class="line number23 index22 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">blueRectHeight = HEIGHT / 2;  </code><code class="cpp comments">// Increase the height</code></div>
+<div class="line number24 index23 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">blueRectX = 0;</code></div>
+<div class="line number25 index24 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">blueRectY = HEIGHT / 2 - blueRectHeight / 2;</code></div>
+<div class="line number26 index25 alt1"> </div>
+<div class="line number27 index26 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledRectangle(im, blueRectX, blueRectY, blueRectX + blueRectWidth, blueRectY + blueRectHeight, BLUE);</code></div>
+<div class="line number28 index27 alt1"> </div>
+<div class="line number29 index28 alt2"><code class="cpp spaces">    </code><code class="cpp comments">// Draw white circle</code></div>
+<div class="line number30 index29 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">centerX = WIDTH / 2;</code></div>
+<div class="line number31 index30 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">centerY = HEIGHT / 2;</code></div>
+<div class="line number32 index31 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">circleRadius = HEIGHT / 8;  </code><code class="cpp comments">// Adjusted radius</code></div>
+<div class="line number33 index32 alt2"> </div>
+<div class="line number34 index33 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledEllipse(im, centerX, centerY, circleRadius * 2, circleRadius * 2, WHITE);</code></div>
+<div class="line number35 index34 alt2"> </div>
+<div class="line number36 index35 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImagePng(im, output);</code></div>
+<div class="line number37 index36 alt2"><code class="cpp spaces">    </code><code class="cpp functions bold">fclose</code><code class="cpp plain">(output);</code></div>
+<div class="line number38 index37 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImageDestroy(im);</code></div>
+<div class="line number39 index38 alt2"><code class="cpp plain">}</code></div>
+<div class="line number40 index39 alt1"> </div>
+<div class="line number41 index40 alt2"><code class="cpp color1 bold">int</code> <code class="cpp plain">main() {</code></div>
+<div class="line number42 index41 alt1"><code class="cpp spaces">    </code><code class="cpp plain">drawLaosFlag();</code></div>
+<div class="line number43 index42 alt2"><code class="cpp spaces">    </code><code class="cpp keyword bold">return</code> <code class="cpp plain">0;</code></div>
+<div class="line number44 index43 alt1"><code class="cpp plain">}</code></div>
+<div class="line number44 index43 alt1"><code class="cpp plain"><img alt="" height="267" src="./../images/laos_flag.png" width="400"/></code></div>
+<div class="line number44 index43 alt1">
+<div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;stdio.h&gt;</code></div>
+<div class="line number2 index1 alt1"><code class="cpp preprocessor">#include &lt;gd.h&gt;</code></div>
+<div class="line number3 index2 alt2"><code class="cpp preprocessor">#include &lt;math.h&gt;</code></div>
+<div class="line number4 index3 alt1"> </div>
+<div class="line number5 index4 alt2"><code class="cpp preprocessor">#define WIDTH 600</code></div>
+<div class="line number6 index5 alt1"><code class="cpp preprocessor">#define HEIGHT 400</code></div>
+<div class="line number7 index6 alt2"><code class="cpp preprocessor">#define WHITE 0xFFFFFF  // White color</code></div>
+<div class="line number8 index7 alt1"><code class="cpp preprocessor">#define BLUE 0x0033A0   // Blue color</code></div>
+<div class="line number9 index8 alt2"><code class="cpp preprocessor">#define RED 0xD52B1E    // Red color</code></div>
+<div class="line number10 index9 alt1"> </div>
+<div class="line number11 index10 alt2"><code class="cpp keyword bold">void</code> <code class="cpp plain">drawRussiaFlag() {</code></div>
+<div class="line number12 index11 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImagePtr im;</code></div>
+<div class="line number13 index12 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">FILE</code> <code class="cpp plain">*output;</code></div>
+<div class="line number14 index13 alt1"> </div>
+<div class="line number15 index14 alt2"><code class="cpp spaces">    </code><code class="cpp plain">im = gdImageCreateTrueColor(WIDTH, HEIGHT);</code></div>
+<div class="line number16 index15 alt1"><code class="cpp spaces">    </code><code class="cpp plain">output = </code><code class="cpp functions bold">fopen</code><code class="cpp plain">(</code><code class="cpp string">"russia_flag.png"</code><code class="cpp plain">, </code><code class="cpp string">"wb"</code><code class="cpp plain">);</code></div>
+<div class="line number17 index16 alt2"> </div>
+<div class="line number18 index17 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Draw white rectangle (top part)</code></div>
+<div class="line number19 index18 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">whiteRectWidth = WIDTH;</code></div>
+<div class="line number20 index19 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">whiteRectHeight = HEIGHT / 3;</code></div>
+<div class="line number21 index20 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">whiteRectX = 0;</code></div>
+<div class="line number22 index21 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">whiteRectY = 0;</code></div>
+<div class="line number23 index22 alt2"> </div>
+<div class="line number24 index23 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledRectangle(im, whiteRectX, whiteRectY, whiteRectX + whiteRectWidth, whiteRectY + whiteRectHeight, WHITE);</code></div>
+<div class="line number25 index24 alt2"> </div>
+<div class="line number26 index25 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Draw blue rectangle (middle part)</code></div>
+<div class="line number27 index26 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">blueRectWidth = WIDTH;</code></div>
+<div class="line number28 index27 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">blueRectHeight = HEIGHT / 3;</code></div>
+<div class="line number29 index28 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">blueRectX = 0;</code></div>
+<div class="line number30 index29 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">blueRectY = HEIGHT / 3;</code></div>
+<div class="line number31 index30 alt2"> </div>
+<div class="line number32 index31 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledRectangle(im, blueRectX, blueRectY, blueRectX + blueRectWidth, blueRectY + blueRectHeight, BLUE);</code></div>
+<div class="line number33 index32 alt2"> </div>
+<div class="line number34 index33 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Draw red rectangle (bottom part)</code></div>
+<div class="line number35 index34 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">redRectWidth = WIDTH;</code></div>
+<div class="line number36 index35 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">redRectHeight = HEIGHT / 3;</code></div>
+<div class="line number37 index36 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">redRectX = 0;</code></div>
+<div class="line number38 index37 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">redRectY = 2 * HEIGHT / 3;</code></div>
+<div class="line number39 index38 alt2"> </div>
+<div class="line number40 index39 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledRectangle(im, redRectX, redRectY, redRectX + redRectWidth, redRectY + redRectHeight, RED);</code></div>
+<div class="line number41 index40 alt2"> </div>
+<div class="line number42 index41 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImagePng(im, output);</code></div>
+<div class="line number43 index42 alt2"><code class="cpp spaces">    </code><code class="cpp functions bold">fclose</code><code class="cpp plain">(output);</code></div>
+<div class="line number44 index43 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImageDestroy(im);</code></div>
+<div class="line number45 index44 alt2"><code class="cpp plain">}</code></div>
+<div class="line number46 index45 alt1"> </div>
+<div class="line number47 index46 alt2"><code class="cpp color1 bold">int</code> <code class="cpp plain">main() {</code></div>
+<div class="line number48 index47 alt1"><code class="cpp spaces">    </code><code class="cpp plain">drawRussiaFlag();</code></div>
+<div class="line number49 index48 alt2"><code class="cpp spaces">    </code><code class="cpp keyword bold">return</code> <code class="cpp plain">0;</code></div>
+<div class="line number50 index49 alt1"><code class="cpp plain">}</code></div>
+<div class="line number50 index49 alt1"><code class="cpp plain"><img alt="" height="267" src="./../images/russia_flag.png" width="400"/></code></div>
+<div class="line number50 index49 alt1">
+<div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;stdio.h&gt;</code></div>
+<div class="line number2 index1 alt1"><code class="cpp preprocessor">#include &lt;gd.h&gt;</code></div>
+<div class="line number3 index2 alt2"> </div>
+<div class="line number4 index3 alt1"><code class="cpp preprocessor">#define WIDTH 600</code></div>
+<div class="line number5 index4 alt2"><code class="cpp preprocessor">#define HEIGHT 400</code></div>
+<div class="line number6 index5 alt1"><code class="cpp preprocessor">#define RED 0xD50A0A   // Red color</code></div>
+<div class="line number7 index6 alt2"><code class="cpp preprocessor">#define WHITE 0xFFFFFF // White color</code></div>
+<div class="line number8 index7 alt1"> </div>
+<div class="line number9 index8 alt2"><code class="cpp keyword bold">void</code> <code class="cpp plain">drawMonacoFlag() {</code></div>
+<div class="line number10 index9 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImagePtr im;</code></div>
+<div class="line number11 index10 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">FILE</code> <code class="cpp plain">*output;</code></div>
+<div class="line number12 index11 alt1"> </div>
+<div class="line number13 index12 alt2"><code class="cpp spaces">    </code><code class="cpp plain">im = gdImageCreateTrueColor(WIDTH, HEIGHT);</code></div>
+<div class="line number14 index13 alt1"><code class="cpp spaces">    </code><code class="cpp plain">output = </code><code class="cpp functions bold">fopen</code><code class="cpp plain">(</code><code class="cpp string">"monaco_flag.png"</code><code class="cpp plain">, </code><code class="cpp string">"wb"</code><code class="cpp plain">);</code></div>
+<div class="line number15 index14 alt2"> </div>
+<div class="line number16 index15 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Draw red upper half</code></div>
+<div class="line number17 index16 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledRectangle(im, 0, 0, WIDTH - 1, HEIGHT / 2 - 1, RED);</code></div>
+<div class="line number18 index17 alt1"> </div>
+<div class="line number19 index18 alt2"><code class="cpp spaces">    </code><code class="cpp comments">// Draw white lower half</code></div>
+<div class="line number20 index19 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledRectangle(im, 0, HEIGHT / 2, WIDTH - 1, HEIGHT - 1, WHITE);</code></div>
+<div class="line number21 index20 alt2"> </div>
+<div class="line number22 index21 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Save the image</code></div>
+<div class="line number23 index22 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImagePng(im, output);</code></div>
+<div class="line number24 index23 alt1"><code class="cpp spaces">    </code><code class="cpp functions bold">fclose</code><code class="cpp plain">(output);</code></div>
+<div class="line number25 index24 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImageDestroy(im);</code></div>
+<div class="line number26 index25 alt1"><code class="cpp plain">}</code></div>
+<div class="line number27 index26 alt2"> </div>
+<div class="line number28 index27 alt1"><code class="cpp color1 bold">int</code> <code class="cpp plain">main() {</code></div>
+<div class="line number29 index28 alt2"><code class="cpp spaces">    </code><code class="cpp plain">drawMonacoFlag();</code></div>
+<div class="line number30 index29 alt1"><code class="cpp spaces">    </code><code class="cpp keyword bold">return</code> <code class="cpp plain">0;</code></div>
+<div class="line number31 index30 alt2"><code class="cpp plain">}</code></div>
+<div class="line number31 index30 alt2"><code class="cpp plain"><img alt="" height="267" src="./../images/monaco_flag.png" width="400"/></code></div>
+<div class="line number31 index30 alt2">
+<div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;stdio.h&gt;</code></div>
+<div class="line number2 index1 alt1"><code class="cpp preprocessor">#include &lt;gd.h&gt;</code></div>
+<div class="line number3 index2 alt2"><code class="cpp preprocessor">#include &lt;math.h&gt;</code></div>
+<div class="line number4 index3 alt1"> </div>
+<div class="line number5 index4 alt2"><code class="cpp preprocessor">#define WIDTH 600</code></div>
+<div class="line number6 index5 alt1"><code class="cpp preprocessor">#define HEIGHT 400</code></div>
+<div class="line number7 index6 alt2"> </div>
+<div class="line number8 index7 alt1"><code class="cpp keyword bold">void</code> <code class="cpp plain">drawThaiFlag(gdImagePtr im) {</code></div>
+<div class="line number9 index8 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">white = gdImageColorAllocate(im, 255, 255, 255);</code></div>
+<div class="line number10 index9 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">indigo = gdImageColorAllocate(im, 46, 49, 146);  </code><code class="cpp comments">// 較深的靛藍色</code></div>
+<div class="line number11 index10 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">red = gdImageColorAllocate(im, 255, 0, 0);</code></div>
+<div class="line number12 index11 alt1"> </div>
+<div class="line number13 index12 alt2"><code class="cpp spaces">    </code><code class="cpp comments">// Draw white background</code></div>
+<div class="line number14 index13 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledRectangle(im, 0, 0, WIDTH, HEIGHT, white);</code></div>
+<div class="line number15 index14 alt2"> </div>
+<div class="line number16 index15 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Calculate stripe heights based on the specified ratio</code></div>
+<div class="line number17 index16 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">totalStripes = 5;</code></div>
+<div class="line number18 index17 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">stripeHeights[5] = {1, 1, 2, 1, 1};</code></div>
+<div class="line number19 index18 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">totalHeight = 0;</code></div>
+<div class="line number20 index19 alt1"><code class="cpp spaces">    </code><code class="cpp keyword bold">for</code> <code class="cpp plain">(</code><code class="cpp color1 bold">int</code> <code class="cpp plain">i = 0; i &lt; totalStripes; ++i) {</code></div>
+<div class="line number21 index20 alt2"><code class="cpp spaces">        </code><code class="cpp plain">totalHeight += stripeHeights[i];</code></div>
+<div class="line number22 index21 alt1"><code class="cpp spaces">    </code><code class="cpp plain">}</code></div>
+<div class="line number23 index22 alt2"> </div>
+<div class="line number24 index23 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Draw stripes</code></div>
+<div class="line number25 index24 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">startY = 0;</code></div>
+<div class="line number26 index25 alt1"><code class="cpp spaces">    </code><code class="cpp keyword bold">for</code> <code class="cpp plain">(</code><code class="cpp color1 bold">int</code> <code class="cpp plain">i = 0; i &lt; totalStripes; ++i) {</code></div>
+<div class="line number27 index26 alt2"><code class="cpp spaces">        </code><code class="cpp color1 bold">int</code> <code class="cpp plain">stripeHeight = stripeHeights[i] * HEIGHT / totalHeight;</code></div>
+<div class="line number28 index27 alt1"><code class="cpp spaces">        </code><code class="cpp keyword bold">switch</code> <code class="cpp plain">(i % 5) {</code></div>
+<div class="line number29 index28 alt2"><code class="cpp spaces">            </code><code class="cpp keyword bold">case</code> <code class="cpp plain">0: </code><code class="cpp comments">// Red stripe</code></div>
+<div class="line number30 index29 alt1"><code class="cpp spaces">                </code><code class="cpp plain">gdImageFilledRectangle(im, 0, startY, WIDTH, startY + stripeHeight, red);</code></div>
+<div class="line number31 index30 alt2"><code class="cpp spaces">                </code><code class="cpp keyword bold">break</code><code class="cpp plain">;</code></div>
+<div class="line number32 index31 alt1"><code class="cpp spaces">            </code><code class="cpp keyword bold">case</code> <code class="cpp plain">1: </code><code class="cpp comments">// White stripe</code></div>
+<div class="line number33 index32 alt2"><code class="cpp spaces">                </code><code class="cpp plain">gdImageFilledRectangle(im, 0, startY, WIDTH, startY + stripeHeight, white);</code></div>
+<div class="line number34 index33 alt1"><code class="cpp spaces">                </code><code class="cpp keyword bold">break</code><code class="cpp plain">;</code></div>
+<div class="line number35 index34 alt2"><code class="cpp spaces">            </code><code class="cpp keyword bold">case</code> <code class="cpp plain">2: </code><code class="cpp comments">// Indigo stripe (靛藍色)</code></div>
+<div class="line number36 index35 alt1"><code class="cpp spaces">                </code><code class="cpp plain">gdImageFilledRectangle(im, 0, startY, WIDTH, startY + stripeHeight, indigo);</code></div>
+<div class="line number37 index36 alt2"><code class="cpp spaces">                </code><code class="cpp keyword bold">break</code><code class="cpp plain">;</code></div>
+<div class="line number38 index37 alt1"><code class="cpp spaces">            </code><code class="cpp keyword bold">case</code> <code class="cpp plain">3: </code><code class="cpp comments">// White stripe</code></div>
+<div class="line number39 index38 alt2"><code class="cpp spaces">                </code><code class="cpp plain">gdImageFilledRectangle(im, 0, startY, WIDTH, startY + stripeHeight, white);</code></div>
+<div class="line number40 index39 alt1"><code class="cpp spaces">                </code><code class="cpp keyword bold">break</code><code class="cpp plain">;</code></div>
+<div class="line number41 index40 alt2"><code class="cpp spaces">            </code><code class="cpp keyword bold">case</code> <code class="cpp plain">4: </code><code class="cpp comments">// Red stripe</code></div>
+<div class="line number42 index41 alt1"><code class="cpp spaces">                </code><code class="cpp plain">gdImageFilledRectangle(im, 0, startY, WIDTH, startY + stripeHeight, red);</code></div>
+<div class="line number43 index42 alt2"><code class="cpp spaces">                </code><code class="cpp keyword bold">break</code><code class="cpp plain">;</code></div>
+<div class="line number44 index43 alt1"><code class="cpp spaces">        </code><code class="cpp plain">}</code></div>
+<div class="line number45 index44 alt2"><code class="cpp spaces">        </code><code class="cpp plain">startY += stripeHeight;</code></div>
+<div class="line number46 index45 alt1"><code class="cpp spaces">    </code><code class="cpp plain">}</code></div>
+<div class="line number47 index46 alt2"><code class="cpp plain">}</code></div>
+<div class="line number48 index47 alt1"> </div>
+<div class="line number49 index48 alt2"><code class="cpp color1 bold">int</code> <code class="cpp plain">main() {</code></div>
+<div class="line number50 index49 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImagePtr im;</code></div>
+<div class="line number51 index50 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">FILE</code> <code class="cpp plain">*outputFile;</code></div>
+<div class="line number52 index51 alt1"> </div>
+<div class="line number53 index52 alt2"><code class="cpp spaces">    </code><code class="cpp comments">// Create a new image with specified width and height</code></div>
+<div class="line number54 index53 alt1"><code class="cpp spaces">    </code><code class="cpp plain">im = gdImageCreate(WIDTH, HEIGHT);</code></div>
+<div class="line number55 index54 alt2"> </div>
+<div class="line number56 index55 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Draw the Thai flag on the image</code></div>
+<div class="line number57 index56 alt2"><code class="cpp spaces">    </code><code class="cpp plain">drawThaiFlag(im);</code></div>
+<div class="line number58 index57 alt1"> </div>
+<div class="line number59 index58 alt2"><code class="cpp spaces">    </code><code class="cpp comments">// Open a file for writing</code></div>
+<div class="line number60 index59 alt1"><code class="cpp spaces">    </code><code class="cpp plain">outputFile = </code><code class="cpp functions bold">fopen</code><code class="cpp plain">(</code><code class="cpp string">"thai_flag.png"</code><code class="cpp plain">, </code><code class="cpp string">"wb"</code><code class="cpp plain">);</code></div>
+<div class="line number61 index60 alt2"> </div>
+<div class="line number62 index61 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Write the image to the file in PNG format</code></div>
+<div class="line number63 index62 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImagePng(im, outputFile);</code></div>
+<div class="line number64 index63 alt1"> </div>
+<div class="line number65 index64 alt2"><code class="cpp spaces">    </code><code class="cpp comments">// Close the file</code></div>
+<div class="line number66 index65 alt1"><code class="cpp spaces">    </code><code class="cpp functions bold">fclose</code><code class="cpp plain">(outputFile);</code></div>
+<div class="line number67 index66 alt2"> </div>
+<div class="line number68 index67 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Free the memory used for the image</code></div>
+<div class="line number69 index68 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImageDestroy(im);</code></div>
+<div class="line number70 index69 alt1"> </div>
+<div class="line number71 index70 alt2"><code class="cpp spaces">    </code><code class="cpp keyword bold">return</code> <code class="cpp plain">0;</code></div>
+<div class="line number72 index71 alt1"><code class="cpp plain">}</code></div>
+<div class="line number72 index71 alt1"><code class="cpp plain"><img alt="" height="267" src="./../images/thai_flag.png" width="400"/></code></div>
+<div class="line number72 index71 alt1">
+<div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;stdio.h&gt;</code></div>
+<div class="line number2 index1 alt1"><code class="cpp preprocessor">#include &lt;gd.h&gt;</code></div>
+<div class="line number3 index2 alt2"> </div>
+<div class="line number4 index3 alt1"><code class="cpp preprocessor">#define WIDTH 600</code></div>
+<div class="line number5 index4 alt2"><code class="cpp preprocessor">#define HEIGHT 400</code></div>
+<div class="line number6 index5 alt1"><code class="cpp preprocessor">#define YELLOW 0xFFD100  // Yellow color</code></div>
+<div class="line number7 index6 alt2"><code class="cpp preprocessor">#define BLUE 0x0057A6    // Blue color</code></div>
+<div class="line number8 index7 alt1"> </div>
+<div class="line number9 index8 alt2"><code class="cpp keyword bold">void</code> <code class="cpp plain">drawUkraineFlag() {</code></div>
+<div class="line number10 index9 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImagePtr im;</code></div>
+<div class="line number11 index10 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">FILE</code> <code class="cpp plain">*output;</code></div>
+<div class="line number12 index11 alt1"> </div>
+<div class="line number13 index12 alt2"><code class="cpp spaces">    </code><code class="cpp plain">im = gdImageCreateTrueColor(WIDTH, HEIGHT);</code></div>
+<div class="line number14 index13 alt1"><code class="cpp spaces">    </code><code class="cpp plain">output = </code><code class="cpp functions bold">fopen</code><code class="cpp plain">(</code><code class="cpp string">"ukraine_flag.png"</code><code class="cpp plain">, </code><code class="cpp string">"wb"</code><code class="cpp plain">);</code></div>
+<div class="line number15 index14 alt2"> </div>
+<div class="line number16 index15 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Allocate yellow and blue colors</code></div>
+<div class="line number17 index16 alt2"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">yellowIndex = gdImageColorAllocate(im, (YELLOW &gt;&gt; 16) &amp; 0xFF, (YELLOW &gt;&gt; 8) &amp; 0xFF, YELLOW &amp; 0xFF);</code></div>
+<div class="line number18 index17 alt1"><code class="cpp spaces">    </code><code class="cpp color1 bold">int</code> <code class="cpp plain">blueIndex = gdImageColorAllocate(im, (BLUE &gt;&gt; 16) &amp; 0xFF, (BLUE &gt;&gt; 8) &amp; 0xFF, BLUE &amp; 0xFF);</code></div>
+<div class="line number19 index18 alt2"> </div>
+<div class="line number20 index19 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Draw blue upper half</code></div>
+<div class="line number21 index20 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledRectangle(im, 0, 0, WIDTH - 1, HEIGHT / 2 - 1, blueIndex);</code></div>
+<div class="line number22 index21 alt1"> </div>
+<div class="line number23 index22 alt2"><code class="cpp spaces">    </code><code class="cpp comments">// Draw yellow lower half</code></div>
+<div class="line number24 index23 alt1"><code class="cpp spaces">    </code><code class="cpp plain">gdImageFilledRectangle(im, 0, HEIGHT / 2, WIDTH - 1, HEIGHT - 1, yellowIndex);</code></div>
+<div class="line number25 index24 alt2"> </div>
+<div class="line number26 index25 alt1"><code class="cpp spaces">    </code><code class="cpp comments">// Save the image</code></div>
+<div class="line number27 index26 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImagePng(im, output);</code></div>
+<div class="line number28 index27 alt1"><code class="cpp spaces">    </code><code class="cpp functions bold">fclose</code><code class="cpp plain">(output);</code></div>
+<div class="line number29 index28 alt2"><code class="cpp spaces">    </code><code class="cpp plain">gdImageDestroy(im);</code></div>
+<div class="line number30 index29 alt1"><code class="cpp plain">}</code></div>
+<div class="line number31 index30 alt2"> </div>
+<div class="line number32 index31 alt1"><code class="cpp color1 bold">int</code> <code class="cpp plain">main() {</code></div>
+<div class="line number33 index32 alt2"><code class="cpp spaces">    </code><code class="cpp plain">drawUkraineFlag();</code></div>
+<div class="line number34 index33 alt1"><code class="cpp spaces">    </code><code class="cpp keyword bold">return</code> <code class="cpp plain">0;</code></div>
+<div class="line number35 index34 alt2"><code class="cpp plain">}</code></div>
+<div class="line number35 index34 alt2"><code class="cpp plain"><img alt="" height="267" src="./../images/ukraine_flag.png" width="400"/></code></div>
+<br />W13 << <a href='W13.html'>Previous</a> <a href='課程評分.html'>Next</a> >> 課程評分</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
