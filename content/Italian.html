@@ -142,8 +142,26 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">W5 << <a href='W5.html'>Previous</a> <a href='ROC.html'>Next</a> >> ROC<br /><h1>W6</h1>
-<br />W5 << <a href='W5.html'>Previous</a> <a href='ROC.html'>Next</a> >> ROC</div>
+    <div id="tipue_search_content">Belgium << <a href='Belgium.html'>Previous</a> <a href='Vietnam.html'>Next</a> >> Vietnam<br /><h1>Italian</h1>
+<div class="line number1 index0 alt2"><code class="cpp plain">#include &lt;stdio.h&gt;<br/>#include &lt;gd.h&gt;<br/><br/>int main() {<br/> int width = 300; // 宽度<br/> int height = 200; // 高度<br/><br/> gdImagePtr image = gdImageCreateTrueColor(width, height);<br/><br/> if (image == NULL) {<br/> printf("Failed to create image.\n");<br/> return 1;<br/> }<br/><br/> // 确定颜色索引<br/> int green = gdImageColorAllocate(image, 0, 128, 0);<br/> int white = gdImageColorAllocate(image, 255, 255, 255);<br/> int red = gdImageColorAllocate(image, 255, 0, 0);<br/><br/> // 填充颜色<br/> gdImageFilledRectangle(image, 0, 0, width / 3, height, green);<br/> gdImageFilledRectangle(image, width / 3, 0, (width / 3) * 2, height, white);<br/> gdImageFilledRectangle(image, (width / 3) * 2, 0, width, height, red);<br/><br/> FILE *outputFile;<br/> outputFile = fopen("./../images/italian_flag.png", "wb");<br/><br/> if (outputFile == NULL) {<br/> printf("Failed to open file for writing.\n");<br/> return 1;<br/> }<br/><br/> gdImagePng(image, outputFile);<br/> fclose(outputFile);<br/><br/> gdImageDestroy(image);<br/><br/> return 0;<br/>}<br/></code></div>
+<div class="line number40 index39 alt1">
+<div>
+<div class="syntaxhighlighter cpp" id="highlighter_796545">
+<table border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td class="code">
+<div class="container">
+<div class="line number1 index0 alt2"><code class="cpp preprocessor"></code></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<img alt="" height="267" src="./../images/italian_flag.png" width="400"/></div>
+<br />Belgium << <a href='Belgium.html'>Previous</a> <a href='Vietnam.html'>Next</a> >> Vietnam</div>
         
     <!-- footer -->
       <div class="container">

@@ -142,8 +142,55 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">W5 << <a href='W5.html'>Previous</a> <a href='ROC.html'>Next</a> >> ROC<br /><h1>W6</h1>
-<br />W5 << <a href='W5.html'>Previous</a> <a href='ROC.html'>Next</a> >> ROC</div>
+    <div id="tipue_search_content">各國國旗 << <a href='各國國旗.html'>Previous</a> <a href='Italian.html'>Next</a> >> Italian<br /><h1>Belgium</h1>
+<div>
+<div class="syntaxhighlighter cpp" id="highlighter_448281">
+<pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">#include &lt;stdio.h&gt;
+#include &lt;gd.h&gt;
+ 
+#define WIDTH 600
+#define HEIGHT 400
+#define BLACK 0x000000  // Black color
+#define YELLOW 0xFFD100 // Yellow color
+#define RED 0xED2939    // Red color
+ 
+void drawBelgiumFlag() {
+    gdImagePtr im;
+    FILE *output;
+ 
+    im = gdImageCreateTrueColor(WIDTH, HEIGHT);
+    output = fopen("belgium_flag.png", "wb");
+ 
+    // Allocate black, yellow, and red colors
+    int blackIndex = gdImageColorAllocate(im, (BLACK &gt;&gt; 16) &amp; 0xFF, (BLACK &gt;&gt; 8) &amp; 0xFF, BLACK &amp; 0xFF);
+    int yellowIndex = gdImageColorAllocate(im, (YELLOW &gt;&gt; 16) &amp; 0xFF, (YELLOW &gt;&gt; 8) &amp; 0xFF, YELLOW &amp; 0xFF);
+    int redIndex = gdImageColorAllocate(im, (RED &gt;&gt; 16) &amp; 0xFF, (RED &gt;&gt; 8) &amp; 0xFF, RED &amp; 0xFF);
+ 
+    // Draw black left third
+    gdImageFilledRectangle(im, 0, 0, WIDTH / 3 - 1, HEIGHT - 1, blackIndex);
+ 
+    // Draw yellow middle third
+    gdImageFilledRectangle(im, WIDTH / 3, 0, 2 * WIDTH / 3 - 1, HEIGHT - 1, yellowIndex);
+ 
+    // Draw red right third
+    gdImageFilledRectangle(im, 2 * WIDTH / 3, 0, WIDTH - 1, HEIGHT - 1, redIndex);
+ 
+    // Save the image
+    gdImagePng(im, output);
+    fclose(output);
+    gdImageDestroy(im);
+}
+ 
+int main() {
+    drawBelgiumFlag();
+    return 0;
+}
+</pre>
+</div>
+</div>
+<p></p>
+<div class="line number1 index0 alt2"><code class="cpp preprocessor"></code><code class="cpp plain"><img alt="" height="267" src="./../images/belgium_flag.png" width="400"/></code></div>
+<br />各國國旗 << <a href='各國國旗.html'>Previous</a> <a href='Italian.html'>Next</a> >> Italian</div>
         
     <!-- footer -->
       <div class="container">
