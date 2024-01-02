@@ -711,7 +711,8 @@
 <p>接下來的小組合作中，我與同組成員分享想法，討論出各種不同的解決方案，我相信與小組成員互相討論定可以提高我和組員輸出寫C語言的能力。</p>
 <p>電腦課程豐富了我的專業知識，期望接下來的課程可以學到更多的新知識，我期待將學到的技能運用到未來的科技上，並在課程設計上更進一步的成長進步。</p>
 <p></p>
-<div class="line number1 index0 alt2"></div><h1>各國國旗</h1>
+<div class="line number1 index0 alt2"></div>
+<h1>各國國旗</h1>
 <h2>Belgium</h2>
 <div>
 <div class="syntaxhighlighter cpp" id="highlighter_448281">
@@ -760,7 +761,7 @@ int main() {
 </div>
 <p></p>
 <div class="line number1 index0 alt2"><code class="cpp preprocessor"></code><code class="cpp plain"><img alt="" height="267" src="/images/belgium_flag.png" width="400"/></code></div>
-<h2 class="line number1 index0 alt2"><code class="cpp plain">Italian</code></h2>
+<h2>Italian</h2>
 <div class="line number1 index0 alt2"><code class="cpp plain">#include &lt;stdio.h&gt;<br/>#include &lt;gd.h&gt;<br/><br/>int main() {<br/> int width = 300; // 宽度<br/> int height = 200; // 高度<br/><br/> gdImagePtr image = gdImageCreateTrueColor(width, height);<br/><br/> if (image == NULL) {<br/> printf("Failed to create image.\n");<br/> return 1;<br/> }<br/><br/> // 确定颜色索引<br/> int green = gdImageColorAllocate(image, 0, 128, 0);<br/> int white = gdImageColorAllocate(image, 255, 255, 255);<br/> int red = gdImageColorAllocate(image, 255, 0, 0);<br/><br/> // 填充颜色<br/> gdImageFilledRectangle(image, 0, 0, width / 3, height, green);<br/> gdImageFilledRectangle(image, width / 3, 0, (width / 3) * 2, height, white);<br/> gdImageFilledRectangle(image, (width / 3) * 2, 0, width, height, red);<br/><br/> FILE *outputFile;<br/> outputFile = fopen("./../images/italian_flag.png", "wb");<br/><br/> if (outputFile == NULL) {<br/> printf("Failed to open file for writing.\n");<br/> return 1;<br/> }<br/><br/> gdImagePng(image, outputFile);<br/> fclose(outputFile);<br/><br/> gdImageDestroy(image);<br/><br/> return 0;<br/>}<br/></code></div>
 <div class="line number40 index39 alt1">
 <div>
@@ -779,7 +780,7 @@ int main() {
 </div>
 </div>
 <img alt="" height="267" src="/images/italian_flag.png" width="400"/></div>
-<h2 class="line number40 index39 alt1">Vietnam</h2>
+<h2>Vietnam</h2>
 <div class="line number40 index39 alt1">
 <div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;stdio.h&gt;</code></div>
 <div class="line number2 index1 alt1"><code class="cpp preprocessor">#include &lt;gd.h&gt;</code></div>
@@ -834,7 +835,7 @@ int main() {
 </div>
 <div class="line number40 index39 alt1">
 <div class="line number1 index0 alt2"><code class="cpp preprocessor"></code><code class="cpp plain"><img alt="" height="267" src="/images/vietnam_flag.png" width="400"/></code></div>
-<h2 class="line number1 index0 alt2"><code class="cpp plain">Bangladesh</code></h2>
+<h2>Bangladesh</h2>
 <div class="line number1 index0 alt2">
 <div>
 <div class="syntaxhighlighter cpp" id="highlighter_932623">
@@ -890,7 +891,7 @@ int main() {
 <div class="line number40 index39 alt1">
 <div class="line number1 index0 alt2"><code class="cpp preprocessor"></code></div>
 <div class="line number35 index34 alt2"><code class="cpp plain"><img alt="" height="267" src="/images/bangladesh_flag.png" width="400"/></code></div>
-<h2 class="line number35 index34 alt2"><code class="cpp plain">Laos</code></h2>
+<h2>Laos</h2>
 <div class="line number35 index34 alt2">
 <div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;stdio.h&gt;</code></div>
 <div class="line number2 index1 alt1"><code class="cpp preprocessor">#include &lt;gd.h&gt;</code></div>
@@ -940,7 +941,7 @@ int main() {
 </div>
 <div class="line number1 index0 alt2"><code class="cpp preprocessor"></code></div>
 <div class="line number44 index43 alt1"><code class="cpp plain"><img alt="" height="267" src="/images/laos_flag.png" width="400"/></code></div>
-<h2 class="line number44 index43 alt1"><code class="cpp plain">Russia</code></h2>
+<h2>Russia</h2>
 <div class="line number44 index43 alt1">
 <div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;stdio.h&gt;</code></div>
 <div class="line number2 index1 alt1"><code class="cpp preprocessor">#include &lt;gd.h&gt;</code></div>
@@ -995,7 +996,7 @@ int main() {
 </div>
 <div class="line number44 index43 alt1">
 <div class="line number1 index0 alt2"><code class="cpp preprocessor"></code><code class="cpp plain"><img alt="" height="267" src="/images/russia_flag.png" width="400"/></code></div>
-<h2 class="line number1 index0 alt2"><code class="cpp plain">Monaco</code></h2>
+<h2>Monaco</h2>
 <div class="line number1 index0 alt2">
 <div>
 <div class="syntaxhighlighter cpp" id="highlighter_771935">
@@ -1046,7 +1047,7 @@ int main() {
 <div class="line number50 index49 alt1">
 <div class="line number1 index0 alt2"><code class="cpp preprocessor"></code></div>
 <div class="line number31 index30 alt2"><code class="cpp plain"><img alt="" height="267" src="/images/monaco_flag.png" width="400"/></code></div>
-<h2 class="line number31 index30 alt2"><code class="cpp plain">Thailand</code></h2>
+<h2>Thailand</h2>
 <div class="line number31 index30 alt2">
 <div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;stdio.h&gt;</code></div>
 <div class="line number2 index1 alt1"><code class="cpp preprocessor">#include &lt;gd.h&gt;</code></div>
@@ -1124,7 +1125,7 @@ int main() {
 <div class="line number31 index30 alt2">
 <div class="line number1 index0 alt2"><code class="cpp preprocessor"></code></div>
 <div class="line number72 index71 alt1"><code class="cpp plain"><img alt="" height="267" src="/images/thai_flag.png" width="400"/></code></div>
-<h2 class="line number72 index71 alt1"><code class="cpp plain">Ukraine</code></h2>
+<h2>Ukraine</h2>
 <div class="line number72 index71 alt1">
 <div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;stdio.h&gt;</code></div>
 <div class="line number2 index1 alt1"><code class="cpp preprocessor">#include &lt;gd.h&gt;</code></div>
@@ -1164,23 +1165,8 @@ int main() {
 </div>
 <div class="line number72 index71 alt1">
 <div class="line number1 index0 alt2"><code class="cpp preprocessor"></code><code class="cpp plain"><img alt="" height="267" src="/images/ukraine_flag.png" width="400"/></code></div>
-</div>
-</div>
-</div>
-</div><h1>課程評分</h1>
-<p>課程評分:</p>
-<p>線上測驗、期中網站與簡報、期末網站與簡報.</p>
-<p>線上測驗:</p>
-<p>建立帳號後 (<span>請將密碼寫入手機的備忘錄</span>), 每週不定時進行.</p>
-<p>期中網站評分與簡報:</p>
-<p>期中考前兩週開始進行.</p>
-<p>期末網站評分與簡報:</p>
-<p>期末考前兩週開始進行.</p>
-<p>期中成績計算:</p>
-<p>期中考與之前各週線上測驗成績平均</p>
-<p>學期成績計算:</p>
-<p>(期中成績與之後各週線上測驗成績平均)*60%+(期中網站與簡報成績)*20%+(期末網站與簡報成績)*20%</p>
-<h1>SSH</h1>
+<h1>Note</h1>
+<h2>ssh</h2>
 <p>下載putty</p>
 <p>在putty資料夾內開啟puttygen.exe做一把金鑰匙</p>
 <p>將key儲存在github帳號內(開啟設定點選ssh)</p>
@@ -1193,7 +1179,7 @@ int main() {
 <p><span>再點選ssh內的Auth裡面Credentials</span></p>
 <p><span><img alt="" height="366" src="https://41223146.github.io/cp2023/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202023-12-26%20122114.png" width="400"/></span></p>
 <p>就完成了</p>
-<h1>KEY</h1>
+<h2>key</h2>
 <p>使用puttygen.exe定位主機位置獲得key(點Generate)</p>
 <p><img alt="" height="288" src="https://41223136.github.io/cp2023/images/puttygen.png" width="400"/></p>
 <p>點選之後並在視窗內移動</p>
@@ -1203,6 +1189,20 @@ int main() {
 <p>把剛剛複製的key-rsa貼上之後點save private key 即可!</p>
 <p>儲存到<span>tinyc-data-home<span> </span></span>名稱:學號</p>
 <p>將鑰匙儲存在自己的USB當中</p>
+<p></p>
+<h1>課程評分</h1>
+<p>課程評分:</p>
+<p>線上測驗、期中網站與簡報、期末網站與簡報.</p>
+<p>線上測驗:</p>
+<p>建立帳號後 (<span>請將密碼寫入手機的備忘錄</span>), 每週不定時進行.</p>
+<p>期中網站評分與簡報:</p>
+<p>期中考前兩週開始進行.</p>
+<p>期末網站評分與簡報:</p>
+<p>期末考前兩週開始進行.</p>
+<p>期中成績計算:</p>
+<p>期中考與之前各週線上測驗成績平均</p>
+<p>學期成績計算:</p>
+<p>(期中成績與之後各週線上測驗成績平均)*60%+(期中網站與簡報成績)*20%+(期末網站與簡報成績)*20%</p>
 <h1>布萊頓</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">https://en.wikipedia.org/wiki/Python_（程式語言）</span></span></span></span></span></span></a></p>
 <h4><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">例子：</span></span></span></span></span></span></h4>
@@ -1491,3 +1491,7 @@ doc["threejsblock"].bind("click", threejsblock.do)
 <p>
 <script src="https://unpkg.com/three@0.144.0/build/three.js" type="text/javascript"></script>
 </p>
+</div>
+</div>
+</div>
+</div>
