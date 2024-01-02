@@ -131,7 +131,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='關於.html'>關於</a><li class='has-children'><a href='作業內容.html'>作業內容</a><ul class='dropdown'><li><a href='W2-1.html'>W2-1</a><li><a href='W3-1.html'>W3-1</a><li><a href='W4-1.html'>W4-1</a><li><a href='W5-1.html'>W5-1</a><li class='has-children'><a href='W6-1.html'>W6-1</a><ul class='dropdown'><li><a href='ROC.html'>ROC</a><li><a href='USA.html'>USA</a><li><a href='Japan.html'>Japan</a><li><a href='PROC.html'>PROC</a><li><a href='Uk.html'>Uk</a><li><a href='Korea.html'>Korea</a></li></ul><li><a href='W7-1.html'>W7-1</a><li><a href='W10-1.html'>W10-1</a><li><a href='W12-1.html'>W12-1</a><li><a href='W13-1.html'>W13-1</a></li></ul><li><a href='W2-2.html'>W2-2</a><li><a href='W3-2.html'>W3-2</a><li><a href='W4-2.html'>W4-2</a><li><a href='W5-2.html'>W5-2</a><li><a href='W6-2.html'>W6-2</a><li><a href='W7-2.html'>W7-2</a><li><a href='W10-2.html'>W10-2</a><li><a href='W12-2.html'>W12-2</a><li><a href='W13-2.html'>W13-2</a><li><a href='各國國旗.html'>各國國旗</a><li><a href='課程評分.html'>課程評分</a><li><a href='SSH.html'>SSH</a><li><a href='KEY.html'>KEY</a><li><a href='布萊頓.html'>布萊頓</a></li>
+                     <li><a href='關於.html'>關於</a><li class='has-children'><a href='作業內容.html'>作業內容</a><ul class='dropdown'><li><a href='W2.html'>W2</a><li><a href='W3.html'>W3</a><li><a href='W4.html'>W4</a><li><a href='W5.html'>W5</a><li class='has-children'><a href='W6.html'>W6</a><ul class='dropdown'><li><a href='ROC.html'>ROC</a><li><a href='USA.html'>USA</a><li><a href='Japan.html'>Japan</a><li><a href='PROC.html'>PROC</a><li><a href='Uk.html'>Uk</a><li><a href='Korea.html'>Korea</a></li></ul><li><a href='W7.html'>W7</a><li><a href='W10.html'>W10</a><li><a href='W12.html'>W12</a><li><a href='W13.html'>W13</a></li></ul><li><a href='各國國旗.html'>各國國旗</a><li><a href='課程評分.html'>課程評分</a><li><a href='SSH.html'>SSH</a><li><a href='KEY.html'>KEY</a><li><a href='布萊頓.html'>布萊頓</a></li>
                       </ul>
                 </nav>
               </div>
@@ -142,7 +142,7 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">W6-1 << <a href='W6-1.html'>Previous</a> <a href='USA.html'>Next</a> >> USA<br /><h1>ROC</h1>
+    <div id="tipue_search_content">W6 << <a href='W6.html'>Previous</a> <a href='USA.html'>Next</a> >> USA<br /><h1>ROC</h1>
 <p>// https://en.wikipedia.org/wiki/Flag_of_the_Republic_of_China<br/>// 內政部國旗參考資料: https://www.moi.gov.tw/cp.aspx?n=10621<br/>// cc roc_flag_in_gd.c -lgd -lm to link with gd and math library<br/>// https://www.rapidtables.com/web/color/RGB_Color.html<br/>// 幾何形狀著色與繪圖練習<br/>// 以下 gd 繪圖程式嘗試畫出 ROC 國旗, 請根據下列程式內容完成後續的國旗繪圖<br/>#include &lt;stdio.h&gt;<br/>#include &lt;gd.h&gt;<br/>#include &lt;math.h&gt;</p>
 <p>void draw_roc_flag(gdImagePtr img);<br/>void draw_white_sun(gdImagePtr img, int x, int y, int size, int color);</p>
 <p>int main() {<br/> // width 3: height 2<br/> int width = 1200;<br/> // 國旗長寬比為 3:2<br/> int height = (int)(width*2.0 / 3.0);</p>
@@ -153,7 +153,7 @@ img.add_border {
 <p>}</p>
 <p>void draw_white_sun(gdImagePtr img, int center_x, int center_y, int sun_radius, int color) {<br/> // M_PI 大小定義於 math.h 標頭檔中, 因為三角函數中採用徑度為角度單位<br/> // 因此定義將角度轉為徑度的轉換變數為 deg, 角度值乘上 deg 就可轉為徑度<br/> float deg = M_PI/180;<br/> // 根據十二道光芒的每一尖角的角度為 15 度, 求出其對應直角三角形的另一角度為 75 度<br/> // 求出十二道光芒中任一菱形的 small radius, 也就是菱形的另一個對應小圓的半徑大小<br/> float sr = sun_radius/tan(75*deg);<br/> int ax, ay, bx, by, dx, dy, ex, ey;<br/> gdPoint points[4];<br/> /* 在塗上十二道光芒中的單一菱形區域之前, 先以座標點畫線測試是否正確<br/> ax = center_x;<br/> ay = center_y - sun_radius;<br/> bx = center_x - sun_radius*tan(15*deg);<br/> by = center_y;<br/> ex = center_x;<br/> ey = center_y + sun_radius;<br/> dx = center_x + sun_radius*tan(15*deg);<br/> dy = center_y;<br/> // AB<br/> gdImageLine(img, ax, ay, bx, by, color);<br/> // BE<br/> gdImageLine(img, bx, by, ex, ey, color);<br/> // ED<br/> gdImageLine(img, ex, ey, dx, dy, color);<br/> // DA<br/> gdImageLine(img, dx, dy, ax, ay, color);<br/> */<br/> ax = center_x;<br/> ay = center_y - sun_radius;<br/> bx = center_x - sun_radius*tan(15*deg);<br/> by = center_y;<br/> ex = center_x;<br/> ey = center_y + sun_radius;<br/> dx = center_x + sun_radius*tan(15*deg);<br/> dy = center_y;<br/> // 確定單一菱形區域的塗色正確後, 利用迴圈每次轉動 30 度, 總共轉六次即可塗上十二道光芒區域<br/> for (int i=1;i&lt;=6;i++){<br/> // A<br/> points[0].x = ax+sun_radius*sin(30*deg*i);<br/> points[0].y = ay+sun_radius-sun_radius*cos(30*deg*i);<br/> // B<br/> points[1].x = bx+sr-sr*cos(30*deg*i);<br/> points[1].y = by-sr*sin(30*deg*i);<br/> // E<br/> points[2].x = ex-sun_radius*sin(30*deg*i);<br/> points[2].y = ey-(sun_radius-sun_radius*cos(30*deg*i));<br/> // D<br/> points[3].x = dx-(sr-sr*cos(30*deg*i));<br/> points[3].y = dy+sr*sin(30*deg*i);<br/> // 對菱形區域範圍塗色<br/> gdImageFilledPolygon(img, points, 4, color);<br/> // 在菱形區域外圍畫線, 明確界定菱形範圍<br/> gdImagePolygon(img, points, 4, color);<br/> }<br/>}</p>
 <p><img alt="" height="267" src="./../images/roc_flag_in_gd.png" width="400"/></p>
-<br />W6-1 << <a href='W6-1.html'>Previous</a> <a href='USA.html'>Next</a> >> USA</div>
+<br />W6 << <a href='W6.html'>Previous</a> <a href='USA.html'>Next</a> >> USA</div>
         
     <!-- footer -->
       <div class="container">
